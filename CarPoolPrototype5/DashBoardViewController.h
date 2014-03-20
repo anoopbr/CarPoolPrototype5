@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DashBoardViewController.h
 //  CarPoolPrototype5
 //
 //  Created by Anoop Balakrishnan Rema on 3/19/14.
@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface DashBoardViewController : UIViewController
 
-- (IBAction)fbLoginButton:(id)sender;
+- (IBAction)logoutButton:(id)sender;
+
 @end
