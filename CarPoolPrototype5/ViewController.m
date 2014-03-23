@@ -33,6 +33,13 @@
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
         [self performSegueWithIdentifier:@"success" sender:self];
     }
+    if (![PFFacebookUtils isLinkedWithUser:user]) {
+        [PFFacebookUtils linkUser:user permissions:nil block:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                NSLog(@"Logged in with Facebook!");
+            }
+        }];
+    }
 }
 
 - (void)didReceiveMemoryWarning
