@@ -11,5 +11,6 @@
 @interface DashBoardViewController : UIViewController
 
 - (IBAction)logoutButton:(id)sender;
+- (IBAction)logoutBtn:(id)sender;
 
 @end

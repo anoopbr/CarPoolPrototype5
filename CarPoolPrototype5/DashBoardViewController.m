@@ -47,7 +47,15 @@
 }
 */
 
+
+
 - (IBAction)logoutButton:(id)sender {
+    [PFUser logOut];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+- (IBAction)logoutBtn:(id)sender {
     [PFUser logOut];
     [self dismissViewControllerAnimated:YES completion:nil];
 }

@@ -14,8 +14,17 @@
 		6E2C929C18DB93A300C2CFC7 /* mytrips-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2C929818DB93A300C2CFC7 /* mytrips-icon.png */; };
 		6E2C929E18DB93A300C2CFC7 /* schedule-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2C929A18DB93A300C2CFC7 /* schedule-icon.png */; };
 		6E2C92A018DB93F100C2CFC7 /* profile_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2C929F18DB93F100C2CFC7 /* profile_icon.png */; };
-		6E2C92A618DF493100C2CFC7 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2C92A318DF493100C2CFC7 /* ECSlidingViewController.m */; };
-		6E2C92A718DF493100C2CFC7 /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2C92A518DF493100C2CFC7 /* UIImage+ImageWithUIView.m */; };
+		6E2C92F618DF6A2A00C2CFC7 /* menuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2C92F518DF6A2A00C2CFC7 /* menuButton.png */; };
+		6E2C930E18DF76E900C2CFC7 /* AMSlideMenuContentSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2C930018DF76E900C2CFC7 /* AMSlideMenuContentSegue.m */; };
+		6E2C930F18DF76E900C2CFC7 /* AMSlideMenuLeftMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2C930218DF76E900C2CFC7 /* AMSlideMenuLeftMenuSegue.m */; };
+		6E2C931018DF76E900C2CFC7 /* AMSlideMenuLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2C930418DF76E900C2CFC7 /* AMSlideMenuLeftTableViewController.m */; };
+		6E2C931118DF76E900C2CFC7 /* AMSlideMenuMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2C930618DF76E900C2CFC7 /* AMSlideMenuMainViewController.m */; };
+		6E2C931218DF76E900C2CFC7 /* AMSlideMenuRightMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2C930918DF76E900C2CFC7 /* AMSlideMenuRightMenuSegue.m */; };
+		6E2C931318DF76E900C2CFC7 /* AMSlideMenuRightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2C930B18DF76E900C2CFC7 /* AMSlideMenuRightTableViewController.m */; };
+		6E2C931418DF76E900C2CFC7 /* UIViewController+AMSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2C930D18DF76E900C2CFC7 /* UIViewController+AMSlideMenu.m */; };
+		6E2C931A18DF850D00C2CFC7 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2C931918DF850D00C2CFC7 /* MainMenuViewController.m */; };
+		6E2C931D18DF974400C2CFC7 /* icon-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2C931B18DF974400C2CFC7 /* icon-menu.png */; };
+		6E2C931E18DF974400C2CFC7 /* icon-menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2C931C18DF974400C2CFC7 /* icon-menu@2x.png */; };
 		6E337DD618DA5D2E00654210 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337DD518DA5D2E00654210 /* Foundation.framework */; };
 		6E337DD818DA5D2E00654210 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337DD718DA5D2E00654210 /* CoreGraphics.framework */; };
 		6E337DDA18DA5D2E00654210 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337DD918DA5D2E00654210 /* UIKit.framework */; };
@@ -78,10 +87,26 @@
 		6E2C929818DB93A300C2CFC7 /* mytrips-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mytrips-icon.png"; sourceTree = "<group>"; };
 		6E2C929A18DB93A300C2CFC7 /* schedule-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule-icon.png"; sourceTree = "<group>"; };
 		6E2C929F18DB93F100C2CFC7 /* profile_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_icon.png; sourceTree = "<group>"; };
-		6E2C92A218DF493100C2CFC7 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
-		6E2C92A318DF493100C2CFC7 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
-		6E2C92A418DF493100C2CFC7 /* UIImage+ImageWithUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithUIView.h"; sourceTree = "<group>"; };
-		6E2C92A518DF493100C2CFC7 /* UIImage+ImageWithUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithUIView.m"; sourceTree = "<group>"; };
+		6E2C92F518DF6A2A00C2CFC7 /* menuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuButton.png; sourceTree = "<group>"; };
+		6E2C92FF18DF76E900C2CFC7 /* AMSlideMenuContentSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuContentSegue.h; sourceTree = "<group>"; };
+		6E2C930018DF76E900C2CFC7 /* AMSlideMenuContentSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuContentSegue.m; sourceTree = "<group>"; };
+		6E2C930118DF76E900C2CFC7 /* AMSlideMenuLeftMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuLeftMenuSegue.h; sourceTree = "<group>"; };
+		6E2C930218DF76E900C2CFC7 /* AMSlideMenuLeftMenuSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuLeftMenuSegue.m; sourceTree = "<group>"; };
+		6E2C930318DF76E900C2CFC7 /* AMSlideMenuLeftTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuLeftTableViewController.h; sourceTree = "<group>"; };
+		6E2C930418DF76E900C2CFC7 /* AMSlideMenuLeftTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuLeftTableViewController.m; sourceTree = "<group>"; };
+		6E2C930518DF76E900C2CFC7 /* AMSlideMenuMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuMainViewController.h; sourceTree = "<group>"; };
+		6E2C930618DF76E900C2CFC7 /* AMSlideMenuMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuMainViewController.m; sourceTree = "<group>"; };
+		6E2C930718DF76E900C2CFC7 /* AMSlideMenuProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuProtocols.h; sourceTree = "<group>"; };
+		6E2C930818DF76E900C2CFC7 /* AMSlideMenuRightMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuRightMenuSegue.h; sourceTree = "<group>"; };
+		6E2C930918DF76E900C2CFC7 /* AMSlideMenuRightMenuSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuRightMenuSegue.m; sourceTree = "<group>"; };
+		6E2C930A18DF76E900C2CFC7 /* AMSlideMenuRightTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuRightTableViewController.h; sourceTree = "<group>"; };
+		6E2C930B18DF76E900C2CFC7 /* AMSlideMenuRightTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuRightTableViewController.m; sourceTree = "<group>"; };
+		6E2C930C18DF76E900C2CFC7 /* UIViewController+AMSlideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AMSlideMenu.h"; sourceTree = "<group>"; };
+		6E2C930D18DF76E900C2CFC7 /* UIViewController+AMSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AMSlideMenu.m"; sourceTree = "<group>"; };
+		6E2C931818DF850D00C2CFC7 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		6E2C931918DF850D00C2CFC7 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		6E2C931B18DF974400C2CFC7 /* icon-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-menu.png"; sourceTree = "<group>"; };
+		6E2C931C18DF974400C2CFC7 /* icon-menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-menu@2x.png"; sourceTree = "<group>"; };
 		6E337DD218DA5D2E00654210 /* CarPoolPrototype5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarPoolPrototype5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E337DD518DA5D2E00654210 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6E337DD718DA5D2E00654210 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -176,15 +201,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6E2C92A118DF493100C2CFC7 /* ECSlidingViewController */ = {
+		6E2C92FE18DF76E900C2CFC7 /* AMSlideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				6E2C92A218DF493100C2CFC7 /* ECSlidingViewController.h */,
-				6E2C92A318DF493100C2CFC7 /* ECSlidingViewController.m */,
-				6E2C92A418DF493100C2CFC7 /* UIImage+ImageWithUIView.h */,
-				6E2C92A518DF493100C2CFC7 /* UIImage+ImageWithUIView.m */,
+				6E2C92FF18DF76E900C2CFC7 /* AMSlideMenuContentSegue.h */,
+				6E2C930018DF76E900C2CFC7 /* AMSlideMenuContentSegue.m */,
+				6E2C930118DF76E900C2CFC7 /* AMSlideMenuLeftMenuSegue.h */,
+				6E2C930218DF76E900C2CFC7 /* AMSlideMenuLeftMenuSegue.m */,
+				6E2C930318DF76E900C2CFC7 /* AMSlideMenuLeftTableViewController.h */,
+				6E2C930418DF76E900C2CFC7 /* AMSlideMenuLeftTableViewController.m */,
+				6E2C930518DF76E900C2CFC7 /* AMSlideMenuMainViewController.h */,
+				6E2C930618DF76E900C2CFC7 /* AMSlideMenuMainViewController.m */,
+				6E2C930718DF76E900C2CFC7 /* AMSlideMenuProtocols.h */,
+				6E2C930818DF76E900C2CFC7 /* AMSlideMenuRightMenuSegue.h */,
+				6E2C930918DF76E900C2CFC7 /* AMSlideMenuRightMenuSegue.m */,
+				6E2C930A18DF76E900C2CFC7 /* AMSlideMenuRightTableViewController.h */,
+				6E2C930B18DF76E900C2CFC7 /* AMSlideMenuRightTableViewController.m */,
+				6E2C930C18DF76E900C2CFC7 /* UIViewController+AMSlideMenu.h */,
+				6E2C930D18DF76E900C2CFC7 /* UIViewController+AMSlideMenu.m */,
 			);
-			path = ECSlidingViewController;
+			path = AMSlideMenu;
 			sourceTree = "<group>";
 		};
 		6E337DC918DA5D2E00654210 = {
@@ -237,7 +273,7 @@
 		6E337DDB18DA5D2E00654210 /* CarPoolPrototype5 */ = {
 			isa = PBXGroup;
 			children = (
-				6E2C92A118DF493100C2CFC7 /* ECSlidingViewController */,
+				6E2C92FE18DF76E900C2CFC7 /* AMSlideMenu */,
 				6E337DE718DA5D2E00654210 /* Main.storyboard */,
 				6EFA99B518DB5A9200B414A0 /* UserProfileViewController.h */,
 				6EFA99B618DB5A9200B414A0 /* UserProfileViewController.m */,
@@ -251,6 +287,8 @@
 				6E337E3C18DA625D00654210 /* LoginViewController.m */,
 				6EF74D9618DA801A002479C2 /* RegisterViewController.h */,
 				6EF74D9718DA801A002479C2 /* RegisterViewController.m */,
+				6E2C931818DF850D00C2CFC7 /* MainMenuViewController.h */,
+				6E2C931918DF850D00C2CFC7 /* MainMenuViewController.m */,
 				6E337DED18DA5D2E00654210 /* Images.xcassets */,
 				6E337DDC18DA5D2E00654210 /* Supporting Files */,
 			);
@@ -262,12 +300,15 @@
 			children = (
 				6E337E0A18DA5D5400654210 /* background_page1_1136x640.png */,
 				6E2C928D18DB7BCC00C2CFC7 /* icon_58.png */,
+				6E2C92F518DF6A2A00C2CFC7 /* menuButton.png */,
 				6E2C928E18DB7BCC00C2CFC7 /* icon_80.png */,
 				6E2C928F18DB7BCC00C2CFC7 /* icon_120.png */,
 				6E337DDD18DA5D2E00654210 /* CarPoolPrototype5-Info.plist */,
 				6E337DE318DA5D2E00654210 /* CarPoolPrototype5-Prefix.pch */,
 				6E337DDE18DA5D2E00654210 /* InfoPlist.strings */,
 				6E2C929718DB93A300C2CFC7 /* browse-icon.png */,
+				6E2C931B18DF974400C2CFC7 /* icon-menu.png */,
+				6E2C931C18DF974400C2CFC7 /* icon-menu@2x.png */,
 				6E2C929818DB93A300C2CFC7 /* mytrips-icon.png */,
 				6E2C929A18DB93A300C2CFC7 /* schedule-icon.png */,
 				6E337E1118DA5D5400654210 /* loading_page_1136x640.png */,
@@ -385,7 +426,10 @@
 				6EF74D9D18DA9152002479C2 /* navbar.png in Resources */,
 				6E2C929018DB7BCC00C2CFC7 /* icon_58.png in Resources */,
 				6E337E1918DA5D5400654210 /* loading_page_960x640.png in Resources */,
+				6E2C92F618DF6A2A00C2CFC7 /* menuButton.png in Resources */,
 				6E337E1818DA5D5400654210 /* loading_page_640x1136.png in Resources */,
+				6E2C931D18DF974400C2CFC7 /* icon-menu.png in Resources */,
+				6E2C931E18DF974400C2CFC7 /* icon-menu@2x.png in Resources */,
 				6E2C92A018DB93F100C2CFC7 /* profile_icon.png in Resources */,
 				6E337DE018DA5D2E00654210 /* InfoPlist.strings in Resources */,
 				6E337E1A18DA5D5400654210 /* loading_page_1136x640.png in Resources */,
@@ -412,12 +456,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EF74D9818DA801A002479C2 /* RegisterViewController.m in Sources */,
+				6E2C930F18DF76E900C2CFC7 /* AMSlideMenuLeftMenuSegue.m in Sources */,
 				6E337E3D18DA625D00654210 /* LoginViewController.m in Sources */,
 				6E337DEC18DA5D2E00654210 /* ViewController.m in Sources */,
-				6E2C92A718DF493100C2CFC7 /* UIImage+ImageWithUIView.m in Sources */,
+				6E2C931A18DF850D00C2CFC7 /* MainMenuViewController.m in Sources */,
 				6EF74D9B18DA86B4002479C2 /* DashBoardViewController.m in Sources */,
+				6E2C931318DF76E900C2CFC7 /* AMSlideMenuRightTableViewController.m in Sources */,
+				6E2C931018DF76E900C2CFC7 /* AMSlideMenuLeftTableViewController.m in Sources */,
+				6E2C931218DF76E900C2CFC7 /* AMSlideMenuRightMenuSegue.m in Sources */,
+				6E2C930E18DF76E900C2CFC7 /* AMSlideMenuContentSegue.m in Sources */,
+				6E2C931418DF76E900C2CFC7 /* UIViewController+AMSlideMenu.m in Sources */,
+				6E2C931118DF76E900C2CFC7 /* AMSlideMenuMainViewController.m in Sources */,
 				6E337DE618DA5D2E00654210 /* AppDelegate.m in Sources */,
-				6E2C92A618DF493100C2CFC7 /* ECSlidingViewController.m in Sources */,
 				6E337DE218DA5D2E00654210 /* main.m in Sources */,
 				6EFA99B718DB5A9200B414A0 /* UserProfileViewController.m in Sources */,
 			);
