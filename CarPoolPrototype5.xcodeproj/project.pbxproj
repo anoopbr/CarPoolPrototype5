@@ -25,6 +25,8 @@
 		6E2C931A18DF850D00C2CFC7 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2C931918DF850D00C2CFC7 /* MainMenuViewController.m */; };
 		6E2C931D18DF974400C2CFC7 /* icon-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2C931B18DF974400C2CFC7 /* icon-menu.png */; };
 		6E2C931E18DF974400C2CFC7 /* icon-menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2C931C18DF974400C2CFC7 /* icon-menu@2x.png */; };
+		6E2C932418DFDF8300C2CFC7 /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2C932318DFDF8300C2CFC7 /* navbar.png */; };
+		6E2C932618DFE34100C2CFC7 /* navbar1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2C932518DFE34100C2CFC7 /* navbar1.png */; };
 		6E337DD618DA5D2E00654210 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337DD518DA5D2E00654210 /* Foundation.framework */; };
 		6E337DD818DA5D2E00654210 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337DD718DA5D2E00654210 /* CoreGraphics.framework */; };
 		6E337DDA18DA5D2E00654210 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337DD918DA5D2E00654210 /* UIKit.framework */; };
@@ -65,7 +67,6 @@
 		6E337E4118DA7C0400654210 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337E4018DA7C0400654210 /* libz.1.1.3.dylib */; };
 		6EF74D9818DA801A002479C2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF74D9718DA801A002479C2 /* RegisterViewController.m */; };
 		6EF74D9B18DA86B4002479C2 /* DashBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF74D9A18DA86B4002479C2 /* DashBoardViewController.m */; };
-		6EF74D9D18DA9152002479C2 /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF74D9C18DA9152002479C2 /* navbar.png */; };
 		6EFA99B718DB5A9200B414A0 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA99B618DB5A9200B414A0 /* UserProfileViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,8 @@
 		6E2C931918DF850D00C2CFC7 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		6E2C931B18DF974400C2CFC7 /* icon-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-menu.png"; sourceTree = "<group>"; };
 		6E2C931C18DF974400C2CFC7 /* icon-menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-menu@2x.png"; sourceTree = "<group>"; };
+		6E2C932318DFDF8300C2CFC7 /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar.png; sourceTree = "<group>"; };
+		6E2C932518DFE34100C2CFC7 /* navbar1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar1.png; sourceTree = "<group>"; };
 		6E337DD218DA5D2E00654210 /* CarPoolPrototype5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarPoolPrototype5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E337DD518DA5D2E00654210 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6E337DD718DA5D2E00654210 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -155,7 +158,6 @@
 		6EF74D9718DA801A002479C2 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		6EF74D9918DA86B4002479C2 /* DashBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardViewController.h; sourceTree = "<group>"; };
 		6EF74D9A18DA86B4002479C2 /* DashBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashBoardViewController.m; sourceTree = "<group>"; };
-		6EF74D9C18DA9152002479C2 /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar.png; sourceTree = "<group>"; };
 		6EFA99B518DB5A9200B414A0 /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileViewController.h; sourceTree = "<group>"; };
 		6EFA99B618DB5A9200B414A0 /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -309,7 +311,9 @@
 				6E2C929718DB93A300C2CFC7 /* browse-icon.png */,
 				6E2C931B18DF974400C2CFC7 /* icon-menu.png */,
 				6E2C931C18DF974400C2CFC7 /* icon-menu@2x.png */,
+				6E2C932518DFE34100C2CFC7 /* navbar1.png */,
 				6E2C929818DB93A300C2CFC7 /* mytrips-icon.png */,
+				6E2C932318DFDF8300C2CFC7 /* navbar.png */,
 				6E2C929A18DB93A300C2CFC7 /* schedule-icon.png */,
 				6E337E1118DA5D5400654210 /* loading_page_1136x640.png */,
 				6E2C929F18DB93F100C2CFC7 /* profile_icon.png */,
@@ -318,7 +322,6 @@
 				6E337E1018DA5D5400654210 /* loading_page_960x640.png */,
 				6E337E1218DA5D5400654210 /* Login_image.png */,
 				6E337DE118DA5D2E00654210 /* main.m */,
-				6EF74D9C18DA9152002479C2 /* navbar.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -423,8 +426,8 @@
 				6E337E1318DA5D5400654210 /* background_page1_1136x640.png in Resources */,
 				6E2C929E18DB93A300C2CFC7 /* schedule-icon.png in Resources */,
 				6E2C929218DB7BCC00C2CFC7 /* icon_120.png in Resources */,
-				6EF74D9D18DA9152002479C2 /* navbar.png in Resources */,
 				6E2C929018DB7BCC00C2CFC7 /* icon_58.png in Resources */,
+				6E2C932618DFE34100C2CFC7 /* navbar1.png in Resources */,
 				6E337E1918DA5D5400654210 /* loading_page_960x640.png in Resources */,
 				6E2C92F618DF6A2A00C2CFC7 /* menuButton.png in Resources */,
 				6E337E1818DA5D5400654210 /* loading_page_640x1136.png in Resources */,
@@ -433,6 +436,7 @@
 				6E2C92A018DB93F100C2CFC7 /* profile_icon.png in Resources */,
 				6E337DE018DA5D2E00654210 /* InfoPlist.strings in Resources */,
 				6E337E1A18DA5D5400654210 /* loading_page_1136x640.png in Resources */,
+				6E2C932418DFDF8300C2CFC7 /* navbar.png in Resources */,
 				6E2C929B18DB93A300C2CFC7 /* browse-icon.png in Resources */,
 				6E337DE918DA5D2E00654210 /* Main.storyboard in Resources */,
 				6E2C929118DB7BCC00C2CFC7 /* icon_80.png in Resources */,

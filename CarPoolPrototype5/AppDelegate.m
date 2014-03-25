@@ -15,7 +15,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    
+    [self customizeAppearence];
     // For Parse SDK
     [Parse setApplicationId:@"gxyesPJxYKRczAKk2lpPbdzmknlS0FBGypHciFGS"
                   clientKey:@"tKPNIxsQz7iaE5uU48qzqVLAATFiDkFOt31UdJZs"];
@@ -60,6 +60,11 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     [FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
+}
+
+- (void)customizeAppearence{
+    UIImage* navbar = [UIImage imageNamed:@"navbar1"];
+    [[UINavigationBar appearance] setBackgroundImage:navbar forBarMetrics:UIBarMetricsDefault];
 }
 
 
