@@ -27,6 +27,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _fromLabel.text = [self.trip objectForKey:@"From"];
+    _toLabel.text = [self.trip objectForKey:@"To"];
+    _dateLabel.text = [NSString stringWithFormat:@"%@",[self.trip objectForKey:@"Date"]];
+    _descriptionLabel.text = [self.trip objectForKey:@"Description"];
+    
+    self.navigationItem.title =  [NSString stringWithFormat:@"%@",[self.trip objectForKey:@"Id"]];
+
+    
 }
 
 - (void)didReceiveMemoryWarning

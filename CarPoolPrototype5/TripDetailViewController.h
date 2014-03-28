@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface TripDetailViewController : UIViewController
+
+@property (strong, nonatomic) IBOutlet UILabel *fromLabel;
+@property (strong, nonatomic) IBOutlet UILabel *toLabel;
+@property (strong, nonatomic) IBOutlet UILabel *dateLabel;
+@property (strong, nonatomic) IBOutlet UILabel *descriptionLabel;
+
+@property (weak, nonatomic) PFObject *trip;
 
 @end

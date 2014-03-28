@@ -8,6 +8,7 @@
 
 #import "BrowseTripsTableViewController.h"
 #import "BrowseTripsTableViewCell.h"
+#import "TripDetailViewController.h"
 
 @interface BrowseTripsTableViewController ()
 
@@ -36,6 +37,7 @@
         
         // The number of objects to show per page
         self.objectsPerPage = 5;
+        
     }
     return self;
 }
@@ -138,6 +140,9 @@
 - (PFQuery *)queryForTable {
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     
+    // Using where clause
+    // [query whereKey:@"From" equalTo:@"Brooklyn"];
+    
     // If no objects are loaded in memory, we look to the cache first to fill the table
     // and then subsequently do a query against the network.
     if ([self.objects count] == 0) {
@@ -194,6 +199,25 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"ShowDetails"]) {
+        
+        NSLog(@"Segue Pressed");
+        
+        
+        TripDetailViewController *tripDetail = [segue destinationViewController];
+        
+        NSIndexPath *myIndexPath = [self.tableView indexPathForSelectedRow];
+        PFObject *object = [self.objects objectAtIndex:myIndexPath.row];
+        
+        TripDetailViewController *detailViewController = [segue destinationViewController];
+        detailViewController.trip = object;
+    
+    }
+}
+
 
 @end
