@@ -78,4 +78,5 @@
     
     // [_activityIndicator startAnimating]; // Show loading indicator until login is finished
 }
+
 @end
