@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		6E02070218E3BC6C00C5322D /* BrowseTripsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E02070118E3BC6C00C5322D /* BrowseTripsTableViewController.m */; };
 		6E02070518E3BDB000C5322D /* BrowseTripsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E02070418E3BDB000C5322D /* BrowseTripsTableViewCell.m */; };
+		6E14108F18F077750080448F /* ScheduleTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E14108E18F077750080448F /* ScheduleTripViewController.m */; };
+		6E14109218F07A3A0080448F /* background_page_2000x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E14109018F07A3A0080448F /* background_page_2000x640.png */; };
+		6E14109318F07A3A0080448F /* background_page1_2000x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E14109118F07A3A0080448F /* background_page1_2000x640.png */; };
 		6E2C929018DB7BCC00C2CFC7 /* icon_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2C928D18DB7BCC00C2CFC7 /* icon_58.png */; };
 		6E2C929118DB7BCC00C2CFC7 /* icon_80.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2C928E18DB7BCC00C2CFC7 /* icon_80.png */; };
 		6E2C929218DB7BCC00C2CFC7 /* icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2C928F18DB7BCC00C2CFC7 /* icon_120.png */; };
@@ -75,6 +78,7 @@
 		6EC24D7D18E5D14200964F31 /* background_page_white_1136x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC24D7C18E5D14200964F31 /* background_page_white_1136x640.png */; };
 		6EC24D8118E5D20500964F31 /* background_page_white_1136x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC24D8018E5D20500964F31 /* background_page_white_1136x640.png */; };
 		6EC24D8418E5D4E000964F31 /* TripDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC24D8318E5D4E000964F31 /* TripDetailViewController.m */; };
+		6EC24D8718E61FDC00964F31 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC24D8618E61FDC00964F31 /* MBProgressHUD.m */; };
 		6EF74D9818DA801A002479C2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF74D9718DA801A002479C2 /* RegisterViewController.m */; };
 		6EF74D9B18DA86B4002479C2 /* DashBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF74D9A18DA86B4002479C2 /* DashBoardViewController.m */; };
 		6EFA99B718DB5A9200B414A0 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA99B618DB5A9200B414A0 /* UserProfileViewController.m */; };
@@ -95,6 +99,10 @@
 		6E02070118E3BC6C00C5322D /* BrowseTripsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BrowseTripsTableViewController.m; path = ../BrowseTripsTableViewController.m; sourceTree = "<group>"; };
 		6E02070318E3BDB000C5322D /* BrowseTripsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowseTripsTableViewCell.h; sourceTree = "<group>"; };
 		6E02070418E3BDB000C5322D /* BrowseTripsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseTripsTableViewCell.m; sourceTree = "<group>"; };
+		6E14108D18F077750080448F /* ScheduleTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleTripViewController.h; sourceTree = "<group>"; };
+		6E14108E18F077750080448F /* ScheduleTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleTripViewController.m; sourceTree = "<group>"; };
+		6E14109018F07A3A0080448F /* background_page_2000x640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_page_2000x640.png; sourceTree = "<group>"; };
+		6E14109118F07A3A0080448F /* background_page1_2000x640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_page1_2000x640.png; sourceTree = "<group>"; };
 		6E2C928D18DB7BCC00C2CFC7 /* icon_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_58.png; sourceTree = "<group>"; };
 		6E2C928E18DB7BCC00C2CFC7 /* icon_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_80.png; sourceTree = "<group>"; };
 		6E2C928F18DB7BCC00C2CFC7 /* icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_120.png; sourceTree = "<group>"; };
@@ -178,6 +186,8 @@
 		6EC24D8018E5D20500964F31 /* background_page_white_1136x640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_page_white_1136x640.png; sourceTree = "<group>"; };
 		6EC24D8218E5D4E000964F31 /* TripDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripDetailViewController.h; sourceTree = "<group>"; };
 		6EC24D8318E5D4E000964F31 /* TripDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripDetailViewController.m; sourceTree = "<group>"; };
+		6EC24D8518E61FDC00964F31 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		6EC24D8618E61FDC00964F31 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		6EF74D9618DA801A002479C2 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		6EF74D9718DA801A002479C2 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		6EF74D9918DA86B4002479C2 /* DashBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardViewController.h; sourceTree = "<group>"; };
@@ -228,6 +238,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E14109418F1D6750080448F /* Scheduling */ = {
+			isa = PBXGroup;
+			children = (
+				6E14108D18F077750080448F /* ScheduleTripViewController.h */,
+				6E14108E18F077750080448F /* ScheduleTripViewController.m */,
+			);
+			name = Scheduling;
+			sourceTree = "<group>";
+		};
+		6E14109518F1D69C0080448F /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				6EF74D9918DA86B4002479C2 /* DashBoardViewController.h */,
+				6EF74D9A18DA86B4002479C2 /* DashBoardViewController.m */,
+				6E337E3B18DA625D00654210 /* LoginViewController.h */,
+				6E337E3C18DA625D00654210 /* LoginViewController.m */,
+				6E2C931818DF850D00C2CFC7 /* MainMenuViewController.h */,
+				6E2C931918DF850D00C2CFC7 /* MainMenuViewController.m */,
+				6EF74D9618DA801A002479C2 /* RegisterViewController.h */,
+				6EF74D9718DA801A002479C2 /* RegisterViewController.m */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		6E14109618F1D6D80080448F /* Browse Trips */ = {
+			isa = PBXGroup;
+			children = (
+				6EC24D8218E5D4E000964F31 /* TripDetailViewController.h */,
+				6EC24D8318E5D4E000964F31 /* TripDetailViewController.m */,
+				6E02070018E3BC6C00C5322D /* BrowseTripsTableViewController.h */,
+				6E02070118E3BC6C00C5322D /* BrowseTripsTableViewController.m */,
+				6E02070318E3BDB000C5322D /* BrowseTripsTableViewCell.h */,
+				6E02070418E3BDB000C5322D /* BrowseTripsTableViewCell.m */,
+			);
+			name = "Browse Trips";
+			sourceTree = "<group>";
+		};
 		6E2C92FE18DF76E900C2CFC7 /* AMSlideMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,28 +348,17 @@
 		6E337DDB18DA5D2E00654210 /* CarPoolPrototype5 */ = {
 			isa = PBXGroup;
 			children = (
+				6E14109618F1D6D80080448F /* Browse Trips */,
+				6E14109518F1D69C0080448F /* Authentication */,
+				6E14109418F1D6750080448F /* Scheduling */,
+				6EC24D8F18E8938D00964F31 /* UserProfile */,
+				6EC24D8818E61FFA00964F31 /* MBProgressHUD */,
 				6E2C92FE18DF76E900C2CFC7 /* AMSlideMenu */,
 				6E337DE718DA5D2E00654210 /* Main.storyboard */,
-				6EC24D8218E5D4E000964F31 /* TripDetailViewController.h */,
-				6EC24D8318E5D4E000964F31 /* TripDetailViewController.m */,
-				6E02070018E3BC6C00C5322D /* BrowseTripsTableViewController.h */,
-				6E02070118E3BC6C00C5322D /* BrowseTripsTableViewController.m */,
-				6E02070318E3BDB000C5322D /* BrowseTripsTableViewCell.h */,
-				6E02070418E3BDB000C5322D /* BrowseTripsTableViewCell.m */,
-				6EFA99B518DB5A9200B414A0 /* UserProfileViewController.h */,
-				6EFA99B618DB5A9200B414A0 /* UserProfileViewController.m */,
-				6EF74D9918DA86B4002479C2 /* DashBoardViewController.h */,
-				6EF74D9A18DA86B4002479C2 /* DashBoardViewController.m */,
 				6E337DE418DA5D2E00654210 /* AppDelegate.h */,
 				6E337DE518DA5D2E00654210 /* AppDelegate.m */,
 				6E337DEA18DA5D2E00654210 /* ViewController.h */,
 				6E337DEB18DA5D2E00654210 /* ViewController.m */,
-				6E337E3B18DA625D00654210 /* LoginViewController.h */,
-				6E337E3C18DA625D00654210 /* LoginViewController.m */,
-				6EF74D9618DA801A002479C2 /* RegisterViewController.h */,
-				6EF74D9718DA801A002479C2 /* RegisterViewController.m */,
-				6E2C931818DF850D00C2CFC7 /* MainMenuViewController.h */,
-				6E2C931918DF850D00C2CFC7 /* MainMenuViewController.m */,
 				6E2C932718E1BE9A00C2CFC7 /* MapViewController.h */,
 				6E2C932818E1BE9A00C2CFC7 /* MapViewController.m */,
 				6E337DED18DA5D2E00654210 /* Images.xcassets */,
@@ -335,6 +371,8 @@
 			isa = PBXGroup;
 			children = (
 				6E337E0A18DA5D5400654210 /* background_page1_1136x640.png */,
+				6E14109018F07A3A0080448F /* background_page_2000x640.png */,
+				6E14109118F07A3A0080448F /* background_page1_2000x640.png */,
 				6EC24D8018E5D20500964F31 /* background_page_white_1136x640.png */,
 				6E2C928D18DB7BCC00C2CFC7 /* icon_58.png */,
 				6E2C92F518DF6A2A00C2CFC7 /* menuButton.png */,
@@ -381,6 +419,25 @@
 				6E337DFD18DA5D2E00654210 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6EC24D8818E61FFA00964F31 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6EC24D8518E61FDC00964F31 /* MBProgressHUD.h */,
+				6EC24D8618E61FDC00964F31 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			path = AMSlideMenu;
+			sourceTree = "<group>";
+		};
+		6EC24D8F18E8938D00964F31 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				6EFA99B518DB5A9200B414A0 /* UserProfileViewController.h */,
+				6EFA99B618DB5A9200B414A0 /* UserProfileViewController.m */,
+			);
+			name = UserProfile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,8 +520,10 @@
 				6EC24D8118E5D20500964F31 /* background_page_white_1136x640.png in Resources */,
 				6E2C929C18DB93A300C2CFC7 /* mytrips-icon.png in Resources */,
 				6E337E1B18DA5D5400654210 /* Login_image.png in Resources */,
+				6E14109318F07A3A0080448F /* background_page1_2000x640.png in Resources */,
 				6E337E1318DA5D5400654210 /* background_page1_1136x640.png in Resources */,
 				6E2C929E18DB93A300C2CFC7 /* schedule-icon.png in Resources */,
+				6E14109218F07A3A0080448F /* background_page_2000x640.png in Resources */,
 				6E2C929218DB7BCC00C2CFC7 /* icon_120.png in Resources */,
 				6E2C929018DB7BCC00C2CFC7 /* icon_58.png in Resources */,
 				6E2C932618DFE34100C2CFC7 /* navbar1.png in Resources */,
@@ -510,10 +569,12 @@
 				6E337DEC18DA5D2E00654210 /* ViewController.m in Sources */,
 				6E2C931A18DF850D00C2CFC7 /* MainMenuViewController.m in Sources */,
 				6EF74D9B18DA86B4002479C2 /* DashBoardViewController.m in Sources */,
+				6EC24D8718E61FDC00964F31 /* MBProgressHUD.m in Sources */,
 				6E02070218E3BC6C00C5322D /* BrowseTripsTableViewController.m in Sources */,
 				6E2C931318DF76E900C2CFC7 /* AMSlideMenuRightTableViewController.m in Sources */,
 				6E2C931018DF76E900C2CFC7 /* AMSlideMenuLeftTableViewController.m in Sources */,
 				6EC24D8418E5D4E000964F31 /* TripDetailViewController.m in Sources */,
+				6E14108F18F077750080448F /* ScheduleTripViewController.m in Sources */,
 				6E2C931218DF76E900C2CFC7 /* AMSlideMenuRightMenuSegue.m in Sources */,
 				6E2C930E18DF76E900C2CFC7 /* AMSlideMenuContentSegue.m in Sources */,
 				6E2C931418DF76E900C2CFC7 /* UIViewController+AMSlideMenu.m in Sources */,

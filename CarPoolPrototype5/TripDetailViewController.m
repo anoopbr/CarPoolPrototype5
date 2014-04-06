@@ -33,7 +33,7 @@
     _dateLabel.text = [NSString stringWithFormat:@"%@",[self.trip objectForKey:@"Date"]];
     _descriptionLabel.text = [self.trip objectForKey:@"Description"];
     
-    self.navigationItem.title =  [NSString stringWithFormat:@"%@",[self.trip objectForKey:@"Id"]];
+    self.navigationItem.title =  [NSString stringWithFormat:@"%@",[self.trip objectForKey:@"Description"]];
 
     
 }
