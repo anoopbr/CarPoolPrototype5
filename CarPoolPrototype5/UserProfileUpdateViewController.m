@@ -29,7 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [scroll setScrollEnabled:YES];
-    [scroll setContentSize:CGSizeMake(320, 800)];
+    [scroll setContentSize:CGSizeMake(320, 1000)];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
     

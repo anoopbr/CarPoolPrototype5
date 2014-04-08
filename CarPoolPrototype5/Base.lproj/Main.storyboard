@@ -312,7 +312,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Person.png" id="53G-4x-TyZ">
-                                        <rect key="frame" x="25" y="79" width="133" height="127"/>
+                                        <rect key="frame" x="101" y="86" width="133" height="127"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="7Mc-e2-e7n">
@@ -377,7 +377,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NhQ-hD-pZQ">
-                                        <rect key="frame" x="205" y="173" width="76" height="33"/>
+                                        <rect key="frame" x="20" y="602" width="280" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.14999999999999999" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Save">
@@ -386,18 +386,6 @@
                                         </state>
                                         <connections>
                                             <action selector="profileUpdateButtonPressed:" destination="6lZ-Zs-cq0" eventType="touchUpInside" id="x0r-L4-wgf"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IWe-mS-FeU">
-                                        <rect key="frame" x="20" y="747" width="76" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.14999999999999999" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Save">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="profileUpdateButtonPressed:" destination="6lZ-Zs-cq0" eventType="touchUpInside" id="1he-lT-eW9"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="6I6-Mw-hlE">
@@ -534,7 +522,7 @@
             </objects>
             <point key="canvasLocation" x="2291" y="2338"/>
         </scene>
-        <!--Scheduled Trip Details View Controller - Trip Details-->
+        <!--Scheduled Trip Details View Controller-->
         <scene sceneID="wJg-32-8lA">
             <objects>
                 <viewController id="Quc-3d-Xmu" customClass="ScheduledTripDetailsViewController" sceneMemberID="viewController">
@@ -626,7 +614,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Trip Details" id="66I-zl-buW">
+                    <navigationItem key="navigationItem" id="66I-zl-buW">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="7rw-th-AC7">
                             <connections>
                                 <segue destination="qW4-8j-S4P" kind="modal" id="zOT-Oe-e8G"/>
@@ -2068,7 +2056,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="seatSlider" destination="sgS-ZB-k93" id="qle-hp-bnp"/>
                         <outlet property="toPlace" destination="YIL-6R-ikL" id="38F-Mu-Enj"/>
                         <outlet property="tripDate" destination="Mx4-Ht-Ikb" id="3an-EW-oqA"/>
-                        <segue destination="Quc-3d-Xmu" kind="modal" identifier="addTripDetailsSegue" id="het-Wh-bza"/>
+                        <segue destination="Quc-3d-Xmu" kind="push" identifier="addTripDetailsSegue" id="het-Wh-bza"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJx-IL-WuR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2096,12 +2084,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="orr-xA-8JE"/>
-        <segue reference="6uo-th-xLc"/>
-        <segue reference="F9m-yF-fkU"/>
+        <segue reference="zOT-Oe-e8G"/>
         <segue reference="4iD-3v-Tyb"/>
         <segue reference="4X8-OV-57M"/>
         <segue reference="FeQ-Ec-a9x"/>
         <segue reference="zbf-aH-P4J"/>
         <segue reference="usv-PD-qO4"/>
+        <segue reference="6uo-th-xLc"/>
     </inferredMetricsTieBreakers>
 </document>
