@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		6E02070218E3BC6C00C5322D /* BrowseTripsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E02070118E3BC6C00C5322D /* BrowseTripsTableViewController.m */; };
 		6E02070518E3BDB000C5322D /* BrowseTripsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E02070418E3BDB000C5322D /* BrowseTripsTableViewCell.m */; };
+		6E0ED3D418F44E32002EC961 /* UserProfileUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0ED3D318F44E32002EC961 /* UserProfileUpdateViewController.m */; };
 		6E14108F18F077750080448F /* ScheduleTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E14108E18F077750080448F /* ScheduleTripViewController.m */; };
 		6E14109218F07A3A0080448F /* background_page_2000x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E14109018F07A3A0080448F /* background_page_2000x640.png */; };
 		6E14109318F07A3A0080448F /* background_page1_2000x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E14109118F07A3A0080448F /* background_page1_2000x640.png */; };
+		6E14109918F229010080448F /* ScheduledTripDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E14109818F229010080448F /* ScheduledTripDetailsViewController.m */; };
 		6E2C929018DB7BCC00C2CFC7 /* icon_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2C928D18DB7BCC00C2CFC7 /* icon_58.png */; };
 		6E2C929118DB7BCC00C2CFC7 /* icon_80.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2C928E18DB7BCC00C2CFC7 /* icon_80.png */; };
 		6E2C929218DB7BCC00C2CFC7 /* icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2C928F18DB7BCC00C2CFC7 /* icon_120.png */; };
@@ -99,10 +101,14 @@
 		6E02070118E3BC6C00C5322D /* BrowseTripsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BrowseTripsTableViewController.m; path = ../BrowseTripsTableViewController.m; sourceTree = "<group>"; };
 		6E02070318E3BDB000C5322D /* BrowseTripsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowseTripsTableViewCell.h; sourceTree = "<group>"; };
 		6E02070418E3BDB000C5322D /* BrowseTripsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseTripsTableViewCell.m; sourceTree = "<group>"; };
+		6E0ED3D218F44E32002EC961 /* UserProfileUpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileUpdateViewController.h; sourceTree = "<group>"; };
+		6E0ED3D318F44E32002EC961 /* UserProfileUpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileUpdateViewController.m; sourceTree = "<group>"; };
 		6E14108D18F077750080448F /* ScheduleTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleTripViewController.h; sourceTree = "<group>"; };
 		6E14108E18F077750080448F /* ScheduleTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleTripViewController.m; sourceTree = "<group>"; };
 		6E14109018F07A3A0080448F /* background_page_2000x640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_page_2000x640.png; sourceTree = "<group>"; };
 		6E14109118F07A3A0080448F /* background_page1_2000x640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_page1_2000x640.png; sourceTree = "<group>"; };
+		6E14109718F229010080448F /* ScheduledTripDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduledTripDetailsViewController.h; sourceTree = "<group>"; };
+		6E14109818F229010080448F /* ScheduledTripDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduledTripDetailsViewController.m; sourceTree = "<group>"; };
 		6E2C928D18DB7BCC00C2CFC7 /* icon_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_58.png; sourceTree = "<group>"; };
 		6E2C928E18DB7BCC00C2CFC7 /* icon_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_80.png; sourceTree = "<group>"; };
 		6E2C928F18DB7BCC00C2CFC7 /* icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_120.png; sourceTree = "<group>"; };
@@ -243,6 +249,8 @@
 			children = (
 				6E14108D18F077750080448F /* ScheduleTripViewController.h */,
 				6E14108E18F077750080448F /* ScheduleTripViewController.m */,
+				6E14109718F229010080448F /* ScheduledTripDetailsViewController.h */,
+				6E14109818F229010080448F /* ScheduledTripDetailsViewController.m */,
 			);
 			name = Scheduling;
 			sourceTree = "<group>";
@@ -436,6 +444,8 @@
 			children = (
 				6EFA99B518DB5A9200B414A0 /* UserProfileViewController.h */,
 				6EFA99B618DB5A9200B414A0 /* UserProfileViewController.m */,
+				6E0ED3D218F44E32002EC961 /* UserProfileUpdateViewController.h */,
+				6E0ED3D318F44E32002EC961 /* UserProfileUpdateViewController.m */,
 			);
 			name = UserProfile;
 			sourceTree = "<group>";
@@ -572,6 +582,7 @@
 				6EC24D8718E61FDC00964F31 /* MBProgressHUD.m in Sources */,
 				6E02070218E3BC6C00C5322D /* BrowseTripsTableViewController.m in Sources */,
 				6E2C931318DF76E900C2CFC7 /* AMSlideMenuRightTableViewController.m in Sources */,
+				6E14109918F229010080448F /* ScheduledTripDetailsViewController.m in Sources */,
 				6E2C931018DF76E900C2CFC7 /* AMSlideMenuLeftTableViewController.m in Sources */,
 				6EC24D8418E5D4E000964F31 /* TripDetailViewController.m in Sources */,
 				6E14108F18F077750080448F /* ScheduleTripViewController.m in Sources */,
@@ -583,6 +594,7 @@
 				6E337DE618DA5D2E00654210 /* AppDelegate.m in Sources */,
 				6E337DE218DA5D2E00654210 /* main.m in Sources */,
 				6EFA99B718DB5A9200B414A0 /* UserProfileViewController.m in Sources */,
+				6E0ED3D418F44E32002EC961 /* UserProfileUpdateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

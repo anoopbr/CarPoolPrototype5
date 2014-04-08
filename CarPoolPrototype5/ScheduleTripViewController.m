@@ -8,6 +8,11 @@
 
 #import "ScheduleTripViewController.h"
 #import <Parse/Parse.h>
+#import "ScheduledTripDetailsViewController.h"
+
+PFObject *parseObject;
+NSString *setFrom, *setTo, *setDescription, *setSeats ;
+NSDate *setDate;
 
 @interface ScheduleTripViewController ()
 
@@ -16,6 +21,7 @@
 @implementation ScheduleTripViewController
 
 @synthesize tripDate, fromPlace, toPlace, description, seatLabel, seatSlider;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,7 +39,8 @@
     [scroll setScrollEnabled:YES];
     [scroll setContentSize:CGSizeMake(320, 800)];
     
-    seatLabel.text = @"0";
+    int slideValue = seatSlider.value;
+    seatLabel.text = [[NSString alloc]initWithFormat:@"%d",slideValue];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
     
@@ -79,6 +86,7 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Fill all the fields" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     } else {
+        NSLog(@"validateFrom else");
         [self addTrip];
     }
 }
@@ -97,15 +105,33 @@
     tripDetails[@"User"] = user;
     tripDetails[@"Seats"] = seatLabel.text;
     tripDetails[@"Description"] = description.text;
-    [tripDetails saveEventually];
-    
-    
-    fromPlace.text = @"";
-    toPlace.text = @"";
-    description.text = @"";
-    seatLabel.text = @"0";
-    
-    [self performSegueWithIdentifier:@"addTripDetailsSegue" sender:self];
+    [tripDetails saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+        if (!error) {
+            
+            setFrom = fromPlace.text;
+            setTo = toPlace.text;
+            setDate = date;
+            setSeats = seatLabel.text;
+            setDescription = description.text;
+            
+            fromPlace.text = @"";
+            toPlace.text = @"";
+            description.text = @"";
+            seatLabel.text = @"0";
+            
+            parseObject = [tripDetails objectId];
+            NSLog(@"Object id %@",parseObject);
+            
+            [self performSegueWithIdentifier:@"addTripDetailsSegue" sender:self];
+            
+        }
+        else {
+            NSString *errorString = [error userInfo][@"error"];
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:errorString delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
+    }];
     
 }
 
@@ -115,4 +141,25 @@
     [toPlace resignFirstResponder];
     [description resignFirstResponder];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    NSLog(@"segue identifier, %@",[segue identifier]);
+    
+    if ([[segue identifier] isEqualToString:@"addTripDetailsSegue"]) {
+        
+        NSLog(@"Segue Pressed : %@",parseObject);
+        
+        ScheduledTripDetailsViewController *detailViewController = [segue destinationViewController];
+        
+        detailViewController.detailsFromPlaceText = setFrom;
+        detailViewController.detailsToPlaceText = setTo;
+        detailViewController.detailsTripDateText = setDate;
+        detailViewController.detailsTripSeatsAvailableText = setSeats;
+        detailViewController.detailsTripDescriptionText = setDescription;
+        
+        
+    }
+}
+
 @end

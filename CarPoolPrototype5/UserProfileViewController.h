@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserProfileViewController : UIViewController
+@interface UserProfileViewController : UIViewController{
+    
+    IBOutlet UIScrollView *scroll;
+}
 
 @property (weak, nonatomic) IBOutlet UIImageView *FBProfilePictureView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -19,5 +22,17 @@
 @property (nonatomic, strong) NSArray *rowTitleArray;
 @property (nonatomic, strong) NSMutableArray *rowDataArray;
 @property (nonatomic, strong) NSMutableData *imageData;
+
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *profilePic;
+@property (weak, nonatomic) IBOutlet UILabel *userName;
+@property (weak, nonatomic) IBOutlet UILabel *userPlace;
+@property (weak, nonatomic) IBOutlet UILabel *userAge;
+@property (weak, nonatomic) IBOutlet UILabel *userGender;
+@property (weak, nonatomic) IBOutlet UILabel *userAboutMe;
+
+
+
 
 @end
