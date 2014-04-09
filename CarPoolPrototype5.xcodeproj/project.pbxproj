@@ -10,6 +10,10 @@
 		6E02070218E3BC6C00C5322D /* BrowseTripsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E02070118E3BC6C00C5322D /* BrowseTripsTableViewController.m */; };
 		6E02070518E3BDB000C5322D /* BrowseTripsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E02070418E3BDB000C5322D /* BrowseTripsTableViewCell.m */; };
 		6E0ED3D418F44E32002EC961 /* UserProfileUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0ED3D318F44E32002EC961 /* UserProfileUpdateViewController.m */; };
+		6E0ED3D818F49108002EC961 /* MyTripsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0ED3D718F49108002EC961 /* MyTripsTableViewController.m */; };
+		6E0ED3DB18F49158002EC961 /* MyTripTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0ED3DA18F49158002EC961 /* MyTripTableViewCell.m */; };
+		6E0ED3DE18F4917B002EC961 /* MyTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0ED3DD18F4917B002EC961 /* MyTripViewController.m */; };
+		6E0ED3E218F4A7B6002EC961 /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0ED3E118F4A7B6002EC961 /* MapPoint.m */; };
 		6E14108F18F077750080448F /* ScheduleTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E14108E18F077750080448F /* ScheduleTripViewController.m */; };
 		6E14109218F07A3A0080448F /* background_page_2000x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E14109018F07A3A0080448F /* background_page_2000x640.png */; };
 		6E14109318F07A3A0080448F /* background_page1_2000x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E14109118F07A3A0080448F /* background_page1_2000x640.png */; };
@@ -103,6 +107,14 @@
 		6E02070418E3BDB000C5322D /* BrowseTripsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseTripsTableViewCell.m; sourceTree = "<group>"; };
 		6E0ED3D218F44E32002EC961 /* UserProfileUpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileUpdateViewController.h; sourceTree = "<group>"; };
 		6E0ED3D318F44E32002EC961 /* UserProfileUpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileUpdateViewController.m; sourceTree = "<group>"; };
+		6E0ED3D618F49108002EC961 /* MyTripsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTripsTableViewController.h; sourceTree = "<group>"; };
+		6E0ED3D718F49108002EC961 /* MyTripsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTripsTableViewController.m; sourceTree = "<group>"; };
+		6E0ED3D918F49158002EC961 /* MyTripTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTripTableViewCell.h; sourceTree = "<group>"; };
+		6E0ED3DA18F49158002EC961 /* MyTripTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTripTableViewCell.m; sourceTree = "<group>"; };
+		6E0ED3DC18F4917B002EC961 /* MyTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTripViewController.h; path = ../MyTripViewController.h; sourceTree = "<group>"; };
+		6E0ED3DD18F4917B002EC961 /* MyTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTripViewController.m; path = ../MyTripViewController.m; sourceTree = "<group>"; };
+		6E0ED3E018F4A7B6002EC961 /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoint.h; sourceTree = "<group>"; };
+		6E0ED3E118F4A7B6002EC961 /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
 		6E14108D18F077750080448F /* ScheduleTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleTripViewController.h; sourceTree = "<group>"; };
 		6E14108E18F077750080448F /* ScheduleTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleTripViewController.m; sourceTree = "<group>"; };
 		6E14109018F07A3A0080448F /* background_page_2000x640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_page_2000x640.png; sourceTree = "<group>"; };
@@ -244,6 +256,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E0ED3D518F48F33002EC961 /* My Trips */ = {
+			isa = PBXGroup;
+			children = (
+				6E0ED3DC18F4917B002EC961 /* MyTripViewController.h */,
+				6E0ED3DD18F4917B002EC961 /* MyTripViewController.m */,
+				6E0ED3D618F49108002EC961 /* MyTripsTableViewController.h */,
+				6E0ED3D718F49108002EC961 /* MyTripsTableViewController.m */,
+				6E0ED3D918F49158002EC961 /* MyTripTableViewCell.h */,
+				6E0ED3DA18F49158002EC961 /* MyTripTableViewCell.m */,
+			);
+			name = "My Trips";
+			sourceTree = "<group>";
+		};
+		6E0ED3DF18F4A777002EC961 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				6E0ED3E018F4A7B6002EC961 /* MapPoint.h */,
+				6E0ED3E118F4A7B6002EC961 /* MapPoint.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
 		6E14109418F1D6750080448F /* Scheduling */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +390,8 @@
 		6E337DDB18DA5D2E00654210 /* CarPoolPrototype5 */ = {
 			isa = PBXGroup;
 			children = (
+				6E0ED3DF18F4A777002EC961 /* Map */,
+				6E0ED3D518F48F33002EC961 /* My Trips */,
 				6E14109618F1D6D80080448F /* Browse Trips */,
 				6E14109518F1D69C0080448F /* Authentication */,
 				6E14109418F1D6750080448F /* Scheduling */,
@@ -577,7 +613,10 @@
 				6E02070518E3BDB000C5322D /* BrowseTripsTableViewCell.m in Sources */,
 				6E337E3D18DA625D00654210 /* LoginViewController.m in Sources */,
 				6E337DEC18DA5D2E00654210 /* ViewController.m in Sources */,
+				6E0ED3E218F4A7B6002EC961 /* MapPoint.m in Sources */,
+				6E0ED3DB18F49158002EC961 /* MyTripTableViewCell.m in Sources */,
 				6E2C931A18DF850D00C2CFC7 /* MainMenuViewController.m in Sources */,
+				6E0ED3D818F49108002EC961 /* MyTripsTableViewController.m in Sources */,
 				6EF74D9B18DA86B4002479C2 /* DashBoardViewController.m in Sources */,
 				6EC24D8718E61FDC00964F31 /* MBProgressHUD.m in Sources */,
 				6E02070218E3BC6C00C5322D /* BrowseTripsTableViewController.m in Sources */,
@@ -589,6 +628,7 @@
 				6E2C931218DF76E900C2CFC7 /* AMSlideMenuRightMenuSegue.m in Sources */,
 				6E2C930E18DF76E900C2CFC7 /* AMSlideMenuContentSegue.m in Sources */,
 				6E2C931418DF76E900C2CFC7 /* UIViewController+AMSlideMenu.m in Sources */,
+				6E0ED3DE18F4917B002EC961 /* MyTripViewController.m in Sources */,
 				6E2C932918E1BE9A00C2CFC7 /* MapViewController.m in Sources */,
 				6E2C931118DF76E900C2CFC7 /* AMSlideMenuMainViewController.m in Sources */,
 				6E337DE618DA5D2E00654210 /* AppDelegate.m in Sources */,

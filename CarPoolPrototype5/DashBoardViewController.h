@@ -7,8 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import "MapPoint.h"
 
-@interface DashBoardViewController : UIViewController
+@interface DashBoardViewController : UIViewController <CLLocationManagerDelegate>
+{
+    
+    CLLocationManager *locationManager;
+    CLLocationCoordinate2D currentCentre;
+    int currenDist;
+    BOOL firstLaunch;
+}
+
 
 - (IBAction)logoutButton:(id)sender;
 - (IBAction)logoutBtn:(id)sender;

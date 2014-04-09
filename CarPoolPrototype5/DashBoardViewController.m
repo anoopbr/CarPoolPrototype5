@@ -28,6 +28,51 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[self locationManager] startUpdatingLocation];
+	CLLocation *location = self->locationManager.location;
+	if (!location) {
+		return;
+	}
+    
+	// Configure the new event with information from the location.
+	CLLocationCoordinate2D coordinate = [location coordinate];
+    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude longitude:coordinate.longitude];
+    PFObject *object = [PFObject objectWithClassName:@"Location"];
+    [object setObject:geoPoint forKey:@"location"];
+    PFUser *currentUser = [PFUser currentUser];
+    PFObject *userobject = [PFObject objectWithClassName:@"Location"];
+    [userobject setObject:currentUser forKey:@"UserID"];
+    
+    PFObject *userLoc = [PFObject objectWithClassName:@"Location"];
+    
+    userLoc[@"UserID"] = currentUser.objectId;
+    
+    [userLoc saveInBackground];
+    
+    NSLog(@"%@",currentUser.username);
+    
+    [object saveEventually:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            // Reload the PFQueryTableViewController
+        }
+    }];
+    
+}
+
+/**
+ Return a location manager -- create one if necessary.
+ */
+- (CLLocationManager *)locationManager {
+	
+    if (locationManager != nil) {
+		return locationManager;
+	}
+	
+	locationManager = [[CLLocationManager alloc] init];
+    locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    locationManager.delegate = self;
+	
+	return locationManager;
 }
 
 - (void)didReceiveMemoryWarning

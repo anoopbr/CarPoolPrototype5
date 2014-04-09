@@ -35,6 +35,38 @@
     
     [self.view addGestureRecognizer:tap];
     
+    PFUser *user = [PFUser currentUser];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"UserDetails"];
+    
+    [query whereKey:@"username" equalTo:user.objectId];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %d", objects.count);
+            // Do something with the found objects
+            for  (PFObject *object in objects){
+                
+                NSLog(@"%@",object);
+                NSLog(@"%@",object[@"first"]);
+                NSLog(@"%@",object[@"last"]);
+                NSLog(@"%@",object[@"location"]);
+                NSLog(@"%@",object[@"gender"]);
+                NSLog(@"%@",object[@"first"]);
+                _firstNameEditable.text = object[@"first"];
+                _lastNameEditable.text = object[@"last"];
+                _locationEditable.text = object[@"location"];
+                _genderEditable.text = object[@"gender"];
+                _dobEditable.text = object[@"dob"];
+                _aboutEditable.text = object[@"aboutme"];
+                
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,6 +82,7 @@
     [_lastNameEditable resignFirstResponder];
     [_aboutEditable resignFirstResponder];
     [_genderEditable resignFirstResponder];
+    [_locationEditable resignFirstResponder];
 }
 
 
@@ -94,10 +127,10 @@
                     
                     if (!error) {
                         
-                        /* UIStoryboard *sb = [UIStoryboard storyboardWithName:@"ProfilePage" bundle:nil];
-                         UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"UserProfileViewController"];
+                        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                         UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"ProfilePage"];
                          vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-                         [self presentViewController:vc animated:YES completion:NULL]; */
+                         [self presentViewController:vc animated:YES completion:NULL];
                         
                     }
                     else {
@@ -132,6 +165,15 @@
                             userUpdate[@"location"] = _locationEditable.text;
                         }
                         [userUpdate saveInBackground];
+                        
+                        [self dismissViewControllerAnimated:YES completion:NULL];
+                        
+                        
+                        
+                        /*UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                        UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"ProfilePage"];
+                        vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+                        [self presentViewController:vc animated:YES completion:NULL];*/
                         
                     }];
                 }

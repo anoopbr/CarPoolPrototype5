@@ -95,17 +95,18 @@ NSDate *setDate;
     
     NSDate *date = [tripDate date];
     
-    PFObject *tripDetails = [PFObject objectWithClassName:@"Trips"];
-    
+    PFObject *trip = [PFObject objectWithClassName:@"Trips"];
+
     PFUser *user = [PFUser currentUser];
     
-    tripDetails[@"From"] = fromPlace.text;
-    tripDetails[@"To"] = toPlace.text;
-    tripDetails[@"Date"] = date;
-    tripDetails[@"User"] = user;
-    tripDetails[@"Seats"] = seatLabel.text;
-    tripDetails[@"Description"] = description.text;
-    [tripDetails saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    trip[@"From"] = fromPlace.text;
+    trip[@"To"] = toPlace.text;
+    trip[@"Date"] = date;
+    trip[@"User"] = user;
+    trip[@"Seats"] = seatLabel.text;
+    trip[@"Description"] = description.text;
+
+    [trip saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         
         if (!error) {
             
@@ -115,13 +116,25 @@ NSDate *setDate;
             setSeats = seatLabel.text;
             setDescription = description.text;
             
+            parseObject = [trip objectId];
+            NSLog(@"Object id %@",parseObject);
+            
+            
+            PFObject *tripDetails = [PFObject objectWithClassName:@"TripDetails"];
+            tripDetails[@"from"] = fromPlace.text;
+            tripDetails[@"to"] = toPlace.text;
+            tripDetails[@"date"] = date;
+            tripDetails[@"user"] = user;
+            tripDetails[@"comment"] = description.text;
+            tripDetails[@"tripid"] = parseObject;
+            tripDetails[@"status"] = @"Owner";
+            
+            [tripDetails saveInBackground];
+            
             fromPlace.text = @"";
             toPlace.text = @"";
             description.text = @"";
             seatLabel.text = @"0";
-            
-            parseObject = [tripDetails objectId];
-            NSLog(@"Object id %@",parseObject);
             
             [self performSegueWithIdentifier:@"addTripDetailsSegue" sender:self];
             

@@ -32,9 +32,6 @@
     [scroll setScrollEnabled:YES];
     [scroll setContentSize:CGSizeMake(320, 800)];
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
-    
-    [self.view addGestureRecognizer:tap];
     
     // Create request for user's Facebook data
     FBRequest *request = [FBRequest requestForMe];
@@ -116,6 +113,66 @@
         }
     }]; */
     
+}
+
+-(void) viewDidAppear{
+    
+    [scroll setScrollEnabled:YES];
+    [scroll setContentSize:CGSizeMake(320, 800)];
+    
+    
+    // Create request for user's Facebook data
+    FBRequest *request = [FBRequest requestForMe];
+    
+    PFUser *user = [PFUser currentUser];
+    
+    NSLog(@"%@",user.objectId);
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"UserDetails"];
+    
+    [query whereKey:@"username" equalTo:user.objectId];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %d", objects.count);
+            // Do something with the found objects
+            for (PFObject *object in objects) {
+                // _profilePic.image = [UIImage imageWithData:object[@"image"]];
+                PFFile *userImageFile = object[@"image"];
+                [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+                    if (!error) {
+                        //UIImage *image = [UIImage imageWithData:imageData];
+                        _profilePic.image = [UIImage imageWithData:imageData];
+                    }
+                }];
+                NSString *first = object[@"first"];
+                NSString *last = object[@"last"];
+                NSMutableString *name = [NSString stringWithFormat: @"%@ %@", first, last];
+                NSDate *dob = object[@"dob"];
+                
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateFormat:@"MM/dd/yyyy"];
+                
+                NSString *date = [dateFormatter stringFromDate:dob];
+                
+                _userName.text = name;
+                _userPlace.text = object[@"location"];
+                _userAge.text = date;
+                _userGender.text = object[@"gender"];
+                _userAboutMe.text = object[@"aboutme"];
+                
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+
+    
+}
+
+-(void) viewWillAppear{
+    NSLog(@"viewWillAppear");
 }
 
 - (void)didReceiveMemoryWarning
