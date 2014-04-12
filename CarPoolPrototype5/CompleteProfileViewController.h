@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CompleteProfileViewController : UIViewController{
+@interface CompleteProfileViewController : UIViewController {
     
     IBOutlet UIScrollView *scroll;
 }
@@ -22,8 +22,5 @@
 @property (weak, nonatomic) IBOutlet UITextField *birthdayTextField;
 
 - (IBAction)saveProfileButtonPressed:(id)sender;
-- (IBAction)saveImageButtonPressed:(id)sender;
-- (IBAction)pickImageButtonPressed:(id)sender;
-@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 
 @end

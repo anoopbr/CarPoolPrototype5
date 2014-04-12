@@ -9,8 +9,7 @@
 #import "CompleteProfileViewController.h"
 #import <Parse/Parse.h>
 
-@interface CompleteProfileViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
-@property(nonatomic, weak) IBOutlet UICollectionView *collectionView;
+@interface CompleteProfileViewController ()
 
 @end
 
@@ -59,72 +58,6 @@
     [self validateForm];
 }
 
-- (IBAction)saveImageButtonPressed:(id)sender {
-    //Disable the send button until we are ready
-    self.navigationItem.rightBarButtonItem.enabled = NO;
-    
-    
-    //Place the loading spinner
-    UIActivityIndicatorView *loadingSpinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    
-    [loadingSpinner setCenter:CGPointMake(self.view.frame.size.width/2.0, self.view.frame.size.height/2.0)];
-    [loadingSpinner startAnimating];
-    
-    [self.view addSubview:loadingSpinner];
-    
-    
-    //Upload a new picture
-    NSData *imageData = UIImagePNGRepresentation(self.profileImage.image);
-    
-    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
-    
-    [imageFile saveInBackground];
-    
-    PFUser *user = [PFUser currentUser];
-    [user setObject:imageFile forKey:@"profilePic"];
-    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if(!error){
-            [self performSegueWithIdentifier:@"registrationcomplete" sender:self];
-            
-        }else{
-            NSString *errorString = [error userInfo][@"error"];
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alert show];
-        }
-        [loadingSpinner stopAnimating];
-        [loadingSpinner removeFromSuperview];
-    }];
-    }
-
-- (IBAction)pickImageButtonPressed:(id)sender {
-    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypePhotoLibrary])
-    {
-        UIImagePickerController *controller = [[UIImagePickerController alloc] init];
-        controller.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        controller.allowsEditing = NO;
-        controller.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:
-                                 UIImagePickerControllerSourceTypePhotoLibrary];
-        controller.delegate = self;
-        [self.navigationController presentViewController: controller animated: YES completion: nil];
-    }
-
-}
-
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-
-{
-    [self.navigationController dismissViewControllerAnimated: YES completion: nil];
-    UIImage *image = [info valueForKey: UIImagePickerControllerOriginalImage];
-    NSData *imageData = UIImageJPEGRepresentation(image, 0.1);
-    
-}
-
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker;
-
-{
-    [self.navigationController dismissViewControllerAnimated: YES completion: nil];
-    
-}
 
 - (void)validateForm{
     if ([_firstTextField.text isEqualToString:@""]) {

@@ -86,6 +86,7 @@
 		6EB6234518F898FA004B9533 /* CompleteProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB6234418F898FA004B9533 /* CompleteProfileViewController.m */; };
 		6EB6234718F8B034004B9533 /* register-form.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB6234618F8B034004B9533 /* register-form.png */; };
 		6EB6234918F8B2D1004B9533 /* save-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB6234818F8B2D1004B9533 /* save-btn.png */; };
+		6EB6234C18F97E8D004B9533 /* UploadImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB6234B18F97E8D004B9533 /* UploadImageViewController.m */; };
 		6EC24D7D18E5D14200964F31 /* background_page_white_1136x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC24D7C18E5D14200964F31 /* background_page_white_1136x640.png */; };
 		6EC24D8118E5D20500964F31 /* background_page_white_1136x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC24D8018E5D20500964F31 /* background_page_white_1136x640.png */; };
 		6EC24D8418E5D4E000964F31 /* TripDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC24D8318E5D4E000964F31 /* TripDetailViewController.m */; };
@@ -212,6 +213,8 @@
 		6EB6234418F898FA004B9533 /* CompleteProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteProfileViewController.m; sourceTree = "<group>"; };
 		6EB6234618F8B034004B9533 /* register-form.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "register-form.png"; sourceTree = "<group>"; };
 		6EB6234818F8B2D1004B9533 /* save-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save-btn.png"; sourceTree = "<group>"; };
+		6EB6234A18F97E8D004B9533 /* UploadImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadImageViewController.h; sourceTree = "<group>"; };
+		6EB6234B18F97E8D004B9533 /* UploadImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadImageViewController.m; sourceTree = "<group>"; };
 		6EC24D7C18E5D14200964F31 /* background_page_white_1136x640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_page_white_1136x640.png; path = "../../../Creative/iOS App Share a Ride/background_page_white_1136x640.png"; sourceTree = "<group>"; };
 		6EC24D8018E5D20500964F31 /* background_page_white_1136x640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_page_white_1136x640.png; sourceTree = "<group>"; };
 		6EC24D8218E5D4E000964F31 /* TripDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripDetailViewController.h; sourceTree = "<group>"; };
@@ -315,6 +318,8 @@
 				6EF74D9718DA801A002479C2 /* RegisterViewController.m */,
 				6EB6234318F898FA004B9533 /* CompleteProfileViewController.h */,
 				6EB6234418F898FA004B9533 /* CompleteProfileViewController.m */,
+				6EB6234A18F97E8D004B9533 /* UploadImageViewController.h */,
+				6EB6234B18F97E8D004B9533 /* UploadImageViewController.m */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -633,6 +638,7 @@
 				6EF74D9818DA801A002479C2 /* RegisterViewController.m in Sources */,
 				6E2C930F18DF76E900C2CFC7 /* AMSlideMenuLeftMenuSegue.m in Sources */,
 				6E02070518E3BDB000C5322D /* BrowseTripsTableViewCell.m in Sources */,
+				6EB6234C18F97E8D004B9533 /* UploadImageViewController.m in Sources */,
 				6E337E3D18DA625D00654210 /* LoginViewController.m in Sources */,
 				6E337DEC18DA5D2E00654210 /* ViewController.m in Sources */,
 				6E0ED3E218F4A7B6002EC961 /* MapPoint.m in Sources */,
