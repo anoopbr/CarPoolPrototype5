@@ -32,120 +32,39 @@
     [scroll setScrollEnabled:YES];
     [scroll setContentSize:CGSizeMake(320, 800)];
     
-    
-    // Create request for user's Facebook data
-    FBRequest *request = [FBRequest requestForMe];
-    
     PFUser *user = [PFUser currentUser];
+    
+    PFQuery *query = [PFUser query];
+    
+    [query getObjectWithId:user];
     
     NSLog(@"%@",user.objectId);
     
-    PFQuery *query = [PFQuery queryWithClassName:@"UserDetails"];
+    NSString *first = user[@"first"];
+    NSString *last = user[@"last"];
+    NSString *aboutme = user[@"aboutme"];
+    NSString *phone = user[@"phone"];
+    NSString *gender = user[@"gender"];
+    NSString *place = user[@"place"];
+    NSMutableString *name = [NSString stringWithFormat: @"%@ %@", first, last];
+    NSDate *dob = user[@"birthday"];
+    PFFile *userImageFile = user[@"image"];
     
-    [query whereKey:@"username" equalTo:user.objectId];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MM/dd/yyyy"];
+    
+    NSString *date = [dateFormatter stringFromDate:dob];
+    
+    self.userName.text = name;
+    self.userAboutMe.text = aboutme;
+    self.userAge.text = dob;
+    self.userGender.text = gender;
+    self.userPlace.text = place;
+    [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
         if (!error) {
-            // The find succeeded.
-            NSLog(@"Successfully retrieved %d", objects.count);
-            // Do something with the found objects
-            for (PFObject *object in objects) {
-                // _profilePic.image = [UIImage imageWithData:object[@"image"]];
-                PFFile *userImageFile = object[@"image"];
-                [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
-                    if (!error) {
-                        //UIImage *image = [UIImage imageWithData:imageData];
-                        _profilePic.image = [UIImage imageWithData:imageData];
-                    }
-                }];
-                NSString *first = object[@"first"];
-                NSString *last = object[@"last"];
-                NSMutableString *name = [NSString stringWithFormat: @"%@ %@", first, last];
-                NSDate *dob = object[@"dob"];
-                
-                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-                [dateFormatter setDateFormat:@"MM/dd/yyyy"];
-                
-                NSString *date = [dateFormatter stringFromDate:dob];
-                
-                _userName.text = name;
-                _userPlace.text = object[@"location"];
-                _userAge.text = date;
-                _userGender.text = object[@"gender"];
-                _userAboutMe.text = object[@"aboutme"];
-                
-                PFQuery *profilePic = [PFQuery queryWithClassName:@"ProfileImage"];
-                [profilePic whereKey:@"user" equalTo:[PFUser currentUser]];
-                [profilePic findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-                    if (!error) {
-                        // The find succeeded.
-                        NSLog(@"Successfully image retrieved %d", objects.count);
-                        // Do something with the found objects
-                        for (PFObject *object in objects) {
-                            // _profilePic.image = [UIImage imageWithData:object[@"image"]];
-                            PFFile *userImageFile = object[@"image"];
-//                            PFFile *userImageFile = [object objectForKey:@"image"];
-                            
-                            NSLog(@"Object %@", objects);
-                            
-                            [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
-                                if (!error) {
-                                    NSLog(@"Seting image");
-                                    //UIImage *image = [UIImage imageWithData:imageData];
-                                    self.profilePic.image = [UIImage imageWithData:imageData];
-//                                    self.profileImage.image = [UIImage imageWithData:imageData];
-                                    NSLog(@"After seting image");
-                                }else{
-                                    NSLog(@"Error in fetching image");
-                                }
-                            }];
-                            
-                        }
-                    } else {
-                        // Log details of the failure
-                        NSLog(@"Error: %@ %@", error, [error userInfo]);
-                    }
-                }];
-                
-            }
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
+            _profilePic.image = [UIImage imageWithData:imageData];
         }
     }];
-    
-
-    
-    // Send request to Facebook
-    /* [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-        if (!error) {
-            // result is a dictionary with the user's Facebook data
-            NSDictionary *userData = (NSDictionary *)result;
-            
-            NSString *facebookID = userData[@"id"];
-            NSString *name = userData[@"name"];
-            NSString *location = userData[@"location"][@"name"];
-            NSString *gender = userData[@"gender"];
-            NSString *birthday = userData[@"birthday"];
-            NSString *relationship = userData[@"relationship_status"];
-            
-            // Download the user's facebook profile picture
-            self.imageData = [[NSMutableData alloc] init]; // the data will be loaded in here
-            
-            // URL should point to https://graph.facebook.com/{facebookId}/picture?type=large&return_ssl_resources=1
-            NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
-            
-            NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:pictureURL
-                                                                      cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                                                  timeoutInterval:2.0f];
-            // Run network request asynchronously
-            NSURLConnection *urlConnection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
-            
-            _profilePic.image = [UIImage imageWithData:self.imageData];
-            _userName.text = userData[@"name"];
-            _userPlace.text = userData[@"location"][@"name"];
-            _userAge.text = userData[@"gender"];
-        }
-    }]; */
     
 }
 
