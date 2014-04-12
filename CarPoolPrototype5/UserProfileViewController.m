@@ -73,6 +73,39 @@
                 _userGender.text = object[@"gender"];
                 _userAboutMe.text = object[@"aboutme"];
                 
+                PFQuery *profilePic = [PFQuery queryWithClassName:@"ProfileImage"];
+                [profilePic whereKey:@"user" equalTo:[PFUser currentUser]];
+                [profilePic findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                    if (!error) {
+                        // The find succeeded.
+                        NSLog(@"Successfully image retrieved %d", objects.count);
+                        // Do something with the found objects
+                        for (PFObject *object in objects) {
+                            // _profilePic.image = [UIImage imageWithData:object[@"image"]];
+                            PFFile *userImageFile = object[@"image"];
+//                            PFFile *userImageFile = [object objectForKey:@"image"];
+                            
+                            NSLog(@"Object %@", objects);
+                            
+                            [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+                                if (!error) {
+                                    NSLog(@"Seting image");
+                                    //UIImage *image = [UIImage imageWithData:imageData];
+                                    self.profilePic.image = [UIImage imageWithData:imageData];
+//                                    self.profileImage.image = [UIImage imageWithData:imageData];
+                                    NSLog(@"After seting image");
+                                }else{
+                                    NSLog(@"Error in fetching image");
+                                }
+                            }];
+                            
+                        }
+                    } else {
+                        // Log details of the failure
+                        NSLog(@"Error: %@ %@", error, [error userInfo]);
+                    }
+                }];
+                
             }
         } else {
             // Log details of the failure
@@ -80,6 +113,7 @@
         }
     }];
     
+
     
     // Send request to Facebook
     /* [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
@@ -167,7 +201,6 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
-
     
 }
 

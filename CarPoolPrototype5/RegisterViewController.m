@@ -28,6 +28,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,7 +86,7 @@
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if(!error){
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Registration Complete. Please Sign in!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Registration Successful!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alert show];
             [self performSegueWithIdentifier:@"registration" sender:self];
         }else{
@@ -91,5 +95,13 @@
             [alert show];
         }
     }];
+}
+
+- (void) dismissKeyboard{
+    
+    [_usernameField resignFirstResponder];
+    [_emailField resignFirstResponder];
+    [_passwordField resignFirstResponder];
+    [_rePasswordField resignFirstResponder];
 }
 @end

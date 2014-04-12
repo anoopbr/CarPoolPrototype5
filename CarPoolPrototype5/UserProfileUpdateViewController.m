@@ -57,7 +57,7 @@
                 _lastNameEditable.text = object[@"last"];
                 _locationEditable.text = object[@"location"];
                 _genderEditable.text = object[@"gender"];
-                _dobEditable.text = object[@"dob"];
+//                _dobEditable.text = object[@"dob"];
                 _aboutEditable.text = object[@"aboutme"];
                 
             }
