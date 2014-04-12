@@ -78,8 +78,6 @@
 		6E337E3118DA618800654210 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337E3018DA618800654210 /* Social.framework */; };
 		6E337E3318DA619300654210 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337E3218DA619300654210 /* StoreKit.framework */; };
 		6E337E3518DA619F00654210 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337E3418DA619F00654210 /* SystemConfiguration.framework */; };
-		6E337E3818DA61BF00654210 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337E3718DA61BF00654210 /* Parse.framework */; };
-		6E337E3A18DA61CD00654210 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337E3918DA61CD00654210 /* FacebookSDK.framework */; };
 		6E337E3D18DA625D00654210 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E337E3C18DA625D00654210 /* LoginViewController.m */; };
 		6E337E3F18DA7B4600654210 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337E3E18DA7B4600654210 /* CoreData.framework */; };
 		6E337E4118DA7C0400654210 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337E4018DA7C0400654210 /* libz.1.1.3.dylib */; };
@@ -87,6 +85,8 @@
 		6EB6234718F8B034004B9533 /* register-form.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB6234618F8B034004B9533 /* register-form.png */; };
 		6EB6234918F8B2D1004B9533 /* save-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB6234818F8B2D1004B9533 /* save-btn.png */; };
 		6EB6234C18F97E8D004B9533 /* UploadImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB6234B18F97E8D004B9533 /* UploadImageViewController.m */; };
+		6EB6234E18F9ACBB004B9533 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB6234D18F9ACBB004B9533 /* FacebookSDK.framework */; };
+		6EB6235018F9ACC4004B9533 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB6234F18F9ACC4004B9533 /* Parse.framework */; };
 		6EC24D7D18E5D14200964F31 /* background_page_white_1136x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC24D7C18E5D14200964F31 /* background_page_white_1136x640.png */; };
 		6EC24D8118E5D20500964F31 /* background_page_white_1136x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC24D8018E5D20500964F31 /* background_page_white_1136x640.png */; };
 		6EC24D8418E5D4E000964F31 /* TripDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC24D8318E5D4E000964F31 /* TripDetailViewController.m */; };
@@ -215,6 +215,8 @@
 		6EB6234818F8B2D1004B9533 /* save-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save-btn.png"; sourceTree = "<group>"; };
 		6EB6234A18F97E8D004B9533 /* UploadImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadImageViewController.h; sourceTree = "<group>"; };
 		6EB6234B18F97E8D004B9533 /* UploadImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadImageViewController.m; sourceTree = "<group>"; };
+		6EB6234D18F9ACBB004B9533 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		6EB6234F18F9ACC4004B9533 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		6EC24D7C18E5D14200964F31 /* background_page_white_1136x640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_page_white_1136x640.png; path = "../../../Creative/iOS App Share a Ride/background_page_white_1136x640.png"; sourceTree = "<group>"; };
 		6EC24D8018E5D20500964F31 /* background_page_white_1136x640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_page_white_1136x640.png; sourceTree = "<group>"; };
 		6EC24D8218E5D4E000964F31 /* TripDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripDetailViewController.h; sourceTree = "<group>"; };
@@ -234,12 +236,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EB6235018F9ACC4004B9533 /* Parse.framework in Frameworks */,
+				6EB6234E18F9ACBB004B9533 /* FacebookSDK.framework in Frameworks */,
 				6E0ED42E18F71F1B002EC961 /* AssetsLibrary.framework in Frameworks */,
 				6E2C932B18E1C0AA00C2CFC7 /* MapKit.framework in Frameworks */,
 				6E337E4118DA7C0400654210 /* libz.1.1.3.dylib in Frameworks */,
 				6E337E3F18DA7B4600654210 /* CoreData.framework in Frameworks */,
-				6E337E3A18DA61CD00654210 /* FacebookSDK.framework in Frameworks */,
-				6E337E3818DA61BF00654210 /* Parse.framework in Frameworks */,
 				6E337DDA18DA5D2E00654210 /* UIKit.framework in Frameworks */,
 				6E337E3518DA619F00654210 /* SystemConfiguration.framework in Frameworks */,
 				6E337E3318DA619300654210 /* StoreKit.framework in Frameworks */,
@@ -381,6 +383,8 @@
 		6E337DD418DA5D2E00654210 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6EB6234F18F9ACC4004B9533 /* Parse.framework */,
+				6EB6234D18F9ACBB004B9533 /* FacebookSDK.framework */,
 				6E0ED42D18F71F1B002EC961 /* AssetsLibrary.framework */,
 				6E2C932A18E1C0AA00C2CFC7 /* MapKit.framework */,
 				6E337E4018DA7C0400654210 /* libz.1.1.3.dylib */,
@@ -794,6 +798,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					/Users/anoop/xcode/ParseStarterProject,
 					/Users/anoop/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarPoolPrototype5/CarPoolPrototype5-Prefix.pch";
@@ -814,6 +819,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					/Users/anoop/xcode/ParseStarterProject,
 					/Users/anoop/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarPoolPrototype5/CarPoolPrototype5-Prefix.pch";
