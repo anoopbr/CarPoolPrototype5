@@ -81,6 +81,7 @@
 		6E337E3D18DA625D00654210 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E337E3C18DA625D00654210 /* LoginViewController.m */; };
 		6E337E3F18DA7B4600654210 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337E3E18DA7B4600654210 /* CoreData.framework */; };
 		6E337E4118DA7C0400654210 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337E4018DA7C0400654210 /* libz.1.1.3.dylib */; };
+		6E39616318FC793D002F3430 /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E39616218FC793D002F3430 /* ResetPasswordViewController.m */; };
 		6EB6234518F898FA004B9533 /* CompleteProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB6234418F898FA004B9533 /* CompleteProfileViewController.m */; };
 		6EB6234718F8B034004B9533 /* register-form.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB6234618F8B034004B9533 /* register-form.png */; };
 		6EB6234918F8B2D1004B9533 /* save-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB6234818F8B2D1004B9533 /* save-btn.png */; };
@@ -210,6 +211,8 @@
 		6E337E3C18DA625D00654210 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		6E337E3E18DA7B4600654210 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6E337E4018DA7C0400654210 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		6E39616118FC793D002F3430 /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
+		6E39616218FC793D002F3430 /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
 		6EB6234318F898FA004B9533 /* CompleteProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteProfileViewController.h; sourceTree = "<group>"; };
 		6EB6234418F898FA004B9533 /* CompleteProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteProfileViewController.m; sourceTree = "<group>"; };
 		6EB6234618F8B034004B9533 /* register-form.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "register-form.png"; sourceTree = "<group>"; };
@@ -324,6 +327,8 @@
 				6EB6234418F898FA004B9533 /* CompleteProfileViewController.m */,
 				6EB6234A18F97E8D004B9533 /* UploadImageViewController.h */,
 				6EB6234B18F97E8D004B9533 /* UploadImageViewController.m */,
+				6E39616118FC793D002F3430 /* ResetPasswordViewController.h */,
+				6E39616218FC793D002F3430 /* ResetPasswordViewController.m */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -668,6 +673,7 @@
 				6E2C931418DF76E900C2CFC7 /* UIViewController+AMSlideMenu.m in Sources */,
 				6E0ED3DE18F4917B002EC961 /* MyTripViewController.m in Sources */,
 				6E2C932918E1BE9A00C2CFC7 /* MapViewController.m in Sources */,
+				6E39616318FC793D002F3430 /* ResetPasswordViewController.m in Sources */,
 				6E2C931118DF76E900C2CFC7 /* AMSlideMenuMainViewController.m in Sources */,
 				6E337DE618DA5D2E00654210 /* AppDelegate.m in Sources */,
 				6E337DE218DA5D2E00654210 /* main.m in Sources */,

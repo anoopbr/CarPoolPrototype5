@@ -78,18 +78,15 @@
         
         if (succeeded){
             
-            //Add the image to the object, and add the comments, the user, and the geolocation (fake)
-            PFObject *imageObject = [PFObject objectWithClassName:@"ProfileImage"];
-            [imageObject setObject:file forKey:@"image"];
-            [imageObject setObject:[PFUser currentUser] forKey:@"user"];
+            PFFile *imageFile = [PFFile fileWithName:@"image.png" data:pictureData];
+            [imageFile saveInBackground];
             
-            PFGeoPoint *point = [PFGeoPoint geoPointWithLatitude:52 longitude:-4];
-            [imageObject setObject:point forKey:@"location"];
+            PFUser *user = [PFUser currentUser];
+            [user setObject:imageFile forKey:@"image"];
             
-            [imageObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 
                 if (succeeded){
-                    //Go back to the wall
                     [self.navigationController popViewControllerAnimated:YES];
                 }
                 else{
