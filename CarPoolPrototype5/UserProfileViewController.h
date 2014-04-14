@@ -30,7 +30,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *userPlace;
 @property (weak, nonatomic) IBOutlet UILabel *userAge;
 @property (weak, nonatomic) IBOutlet UILabel *userGender;
-@property (weak, nonatomic) IBOutlet UILabel *userAboutMe;
+@property (weak, nonatomic) IBOutlet UITextView *userAboutMe;
 
 
 

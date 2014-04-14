@@ -38,7 +38,7 @@
     
     [query getObjectWithId:user];
     
-    NSLog(@"%@",user.objectId);
+    NSLog(@"%@",user);
     
     NSString *first = user[@"first"];
     NSString *last = user[@"last"];
@@ -47,7 +47,7 @@
     NSString *gender = user[@"gender"];
     NSString *place = user[@"place"];
     NSMutableString *name = [NSString stringWithFormat: @"%@ %@", first, last];
-    NSDate *dob = user[@"birthday"];
+    NSDate *dob = user[@"createdAt"];
     PFFile *userImageFile = user[@"image"];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

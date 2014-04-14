@@ -13,6 +13,7 @@
 PFObject *parseObject;
 NSString *setFrom, *setTo, *setDescription, *setSeats ;
 NSDate *setDate;
+NSString *dateText;
 
 @interface ScheduleTripViewController ()
 
@@ -20,7 +21,7 @@ NSDate *setDate;
 
 @implementation ScheduleTripViewController
 
-@synthesize tripDate, fromPlace, toPlace, description, seatLabel, seatSlider;
+@synthesize tripDate, fromPlace, toPlace, description, seatLabel, seatSlider, dateField;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -36,6 +37,13 @@ NSDate *setDate;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    fromPlace.text = @"";
+    toPlace.text = @"";
+    description.text = @"";
+    dateField.text = @"";
+    seatLabel.text = @"0";
+    [seatSlider setValue:0 animated:YES];
     [scroll setScrollEnabled:YES];
     [scroll setContentSize:CGSizeMake(320, 800)];
     
@@ -45,6 +53,12 @@ NSDate *setDate;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
+    
+    UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+    
+    [datePicker setDate:[NSDate date]];
+    [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
+    [dateField setInputView:datePicker];
     
 }
 
@@ -70,6 +84,7 @@ NSDate *setDate;
     [fromPlace resignFirstResponder];
     [toPlace resignFirstResponder];
     [description resignFirstResponder];
+    [dateField resignFirstResponder];
     
     [self validateFrom];
     
@@ -82,18 +97,57 @@ NSDate *setDate;
 }
 
 - (void)validateFrom{
+    
+    NSDateFormatter * Dateformats= [[NSDateFormatter alloc] init];
+    
+    [Dateformats setDateFormat:@"MM-dd-yyyy HH:mm a +zzz"]; //ex @"MM/DD/yyyy hh:mm:ss"
+    NSDate *myDate=[Dateformats dateFromString:dateText];
+    NSLog(@"date picked %@",myDate);
+    
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDateComponents *components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:[NSDate date]];
+    NSDate *today = [cal dateFromComponents:components];
+    
+    NSComparisonResult result = [today compare:myDate];
+    
+    NSString *dateinFuture = @"NO";
+    
+    switch (result)
+    {
+        case NSOrderedAscending:
+            dateinFuture = @"YES";
+            NSLog(@"%@ is in future from %@", myDate, today);
+            break;
+        case NSOrderedDescending:
+            NSLog(@"%@ is in past from %@", myDate, today);
+            break;
+        case NSOrderedSame:
+            NSLog(@"%@ is the same as %@", myDate, today);
+            break;
+        default:
+            NSLog(@"erorr dates %@, %@", myDate, today);
+            break;
+    }
+    
     if ([fromPlace.text isEqualToString:@""]||[toPlace.text isEqualToString:@""]||[description.text isEqualToString:@""]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Fill all the fields" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
-    } else {
+    } else if(result!=NSOrderedAscending){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please check the dates" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }else {
         NSLog(@"validateFrom else");
         [self addTrip];
     }
 }
 
 - (void)addTrip{
+
+    NSDateFormatter * Dateformats= [[NSDateFormatter alloc] init];
     
-    NSDate *date = [tripDate date];
+    [Dateformats setDateFormat:@"MM-dd-yyyy HH:mm a +zzz"]; //ex @"MM/DD/yyyy hh:mm:ss"
+    NSDate *myDate=[Dateformats dateFromString:dateText];
+    NSLog(@"date picked %@",myDate);
     
     PFObject *trip = [PFObject objectWithClassName:@"Trips"];
 
@@ -101,7 +155,7 @@ NSDate *setDate;
     
     trip[@"From"] = fromPlace.text;
     trip[@"To"] = toPlace.text;
-    trip[@"Date"] = date;
+    trip[@"Date"] = myDate;
     trip[@"User"] = user;
     trip[@"Seats"] = seatLabel.text;
     trip[@"Description"] = description.text;
@@ -112,7 +166,7 @@ NSDate *setDate;
             
             setFrom = fromPlace.text;
             setTo = toPlace.text;
-            setDate = date;
+            setDate = myDate;
             setSeats = seatLabel.text;
             setDescription = description.text;
             
@@ -123,7 +177,7 @@ NSDate *setDate;
             PFObject *tripDetails = [PFObject objectWithClassName:@"TripDetails"];
             tripDetails[@"from"] = fromPlace.text;
             tripDetails[@"to"] = toPlace.text;
-            tripDetails[@"date"] = date;
+            tripDetails[@"date"] = myDate;
             tripDetails[@"user"] = user;
             tripDetails[@"comment"] = description.text;
             tripDetails[@"tripid"] = parseObject;
@@ -134,7 +188,9 @@ NSDate *setDate;
             fromPlace.text = @"";
             toPlace.text = @"";
             description.text = @"";
+            dateField.text = @"";
             seatLabel.text = @"0";
+            seatSlider.value = 0;
             
             [self performSegueWithIdentifier:@"addTripDetailsSegue" sender:self];
             
@@ -153,6 +209,7 @@ NSDate *setDate;
     [fromPlace resignFirstResponder];
     [toPlace resignFirstResponder];
     [description resignFirstResponder];
+    [dateField resignFirstResponder];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -171,6 +228,24 @@ NSDate *setDate;
         detailViewController.detailsTripSeatsAvailableText = setSeats;
         detailViewController.detailsTripDescriptionText = setDescription;
         
+        
+    }
+}
+
+-(void)updateDateField:(id)sender
+{
+    if([dateField isFirstResponder]){
+        UIDatePicker *picker = (UIDatePicker*)dateField.inputView;
+        NSLog(@"date :: %@",picker.date);
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"MM-dd-yyyy HH:mm a +zzz"];
+        
+        NSDate *date = [picker date];
+        
+        dateText = [dateFormatter stringFromDate:date];
+        NSLog(@"formattedDateString: %@", dateText);
+        
+        dateField.text = dateText;
         
     }
 }

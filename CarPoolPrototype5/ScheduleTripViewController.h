@@ -17,9 +17,10 @@
 @property (strong, nonatomic) IBOutlet UITextField *toPlace;
 @property (strong, nonatomic) IBOutlet UIDatePicker *tripDate;
 @property (strong, nonatomic) IBOutlet UITextView *description;
+@property (strong, nonatomic) IBOutlet UITextField *dateField;
 
-@property (retain, nonatomic) IBOutlet UISlider *seatSlider;
-@property (retain, nonatomic) IBOutlet UILabel *seatLabel;
+@property (strong, nonatomic) IBOutlet UISlider *seatSlider;
+@property (strong, nonatomic) IBOutlet UILabel *seatLabel;
 
 
 - (IBAction)submitTrip:(id)sender;

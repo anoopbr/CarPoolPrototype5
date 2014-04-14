@@ -87,6 +87,7 @@
 		6EB6234C18F97E8D004B9533 /* UploadImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB6234B18F97E8D004B9533 /* UploadImageViewController.m */; };
 		6EB6234E18F9ACBB004B9533 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB6234D18F9ACBB004B9533 /* FacebookSDK.framework */; };
 		6EB6235018F9ACC4004B9533 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB6234F18F9ACC4004B9533 /* Parse.framework */; };
+		6EB6235418F9B0F4004B9533 /* background_page_white1_1136x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB6235318F9B0F4004B9533 /* background_page_white1_1136x640.png */; };
 		6EC24D7D18E5D14200964F31 /* background_page_white_1136x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC24D7C18E5D14200964F31 /* background_page_white_1136x640.png */; };
 		6EC24D8118E5D20500964F31 /* background_page_white_1136x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC24D8018E5D20500964F31 /* background_page_white_1136x640.png */; };
 		6EC24D8418E5D4E000964F31 /* TripDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC24D8318E5D4E000964F31 /* TripDetailViewController.m */; };
@@ -217,6 +218,7 @@
 		6EB6234B18F97E8D004B9533 /* UploadImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadImageViewController.m; sourceTree = "<group>"; };
 		6EB6234D18F9ACBB004B9533 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		6EB6234F18F9ACC4004B9533 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		6EB6235318F9B0F4004B9533 /* background_page_white1_1136x640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_page_white1_1136x640.png; sourceTree = "<group>"; };
 		6EC24D7C18E5D14200964F31 /* background_page_white_1136x640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_page_white_1136x640.png; path = "../../../Creative/iOS App Share a Ride/background_page_white_1136x640.png"; sourceTree = "<group>"; };
 		6EC24D8018E5D20500964F31 /* background_page_white_1136x640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_page_white_1136x640.png; sourceTree = "<group>"; };
 		6EC24D8218E5D4E000964F31 /* TripDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripDetailViewController.h; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 				6E2C928D18DB7BCC00C2CFC7 /* icon_58.png */,
 				6E2C92F518DF6A2A00C2CFC7 /* menuButton.png */,
 				6E2C928E18DB7BCC00C2CFC7 /* icon_80.png */,
+				6EB6235318F9B0F4004B9533 /* background_page_white1_1136x640.png */,
 				6E2C932C18E1CF4200C2CFC7 /* Person.png */,
 				6E2C932D18E1CF4200C2CFC7 /* Person1.png */,
 				6EC24D7C18E5D14200964F31 /* background_page_white_1136x640.png */,
@@ -599,6 +602,7 @@
 				6E337E1318DA5D5400654210 /* background_page1_1136x640.png in Resources */,
 				6E2C929E18DB93A300C2CFC7 /* schedule-icon.png in Resources */,
 				6E14109218F07A3A0080448F /* background_page_2000x640.png in Resources */,
+				6EB6235418F9B0F4004B9533 /* background_page_white1_1136x640.png in Resources */,
 				6E2C929218DB7BCC00C2CFC7 /* icon_120.png in Resources */,
 				6E2C929018DB7BCC00C2CFC7 /* icon_58.png in Resources */,
 				6E2C932618DFE34100C2CFC7 /* navbar1.png in Resources */,

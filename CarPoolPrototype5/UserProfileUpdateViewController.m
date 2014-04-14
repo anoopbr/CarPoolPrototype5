@@ -101,7 +101,7 @@
     [user saveInBackground];
     [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if(!error){
-            [self performSegueWithIdentifier:@"pickImage" sender:self];
+            [self dismissViewControllerAnimated:YES completion:NULL];
             
         }else{
             NSString *errorString = [error userInfo][@"error"];

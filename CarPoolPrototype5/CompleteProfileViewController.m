@@ -69,6 +69,9 @@
     }else if ([_aboutmeTextField.text isEqualToString:@""]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please give an introduction about yourself!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
+    }else if ([_placeTextField.text isEqualToString:@""]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please tell us where you are from!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }
     else {
         [self updateUserProfile];
