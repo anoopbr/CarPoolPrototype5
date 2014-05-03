@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *detailsToPlace;
 @property (weak, nonatomic) IBOutlet UILabel *detailsTripDate;
 @property (weak, nonatomic) IBOutlet UILabel *detailsTripSeatsAvailable;
-@property (weak, nonatomic) IBOutlet UILabel *detailsTripDescription;
+@property (weak, nonatomic) IBOutlet UITextView *detailsTripDescription;
 
 
 @property (weak, nonatomic) NSString *detailsFromPlaceText;
@@ -24,6 +24,7 @@
 @property (weak, nonatomic) NSString *detailsTripSeatsAvailableText;
 @property (weak, nonatomic) NSString *detailsTripDescriptionText;
 
+- (IBAction)addToCelenderButtonPressed:(id)sender;
 
 @property (weak, nonatomic) PFObject *trip;
 

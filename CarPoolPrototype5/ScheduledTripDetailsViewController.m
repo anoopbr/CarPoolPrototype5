@@ -7,6 +7,7 @@
 //
 
 #import "ScheduledTripDetailsViewController.h"
+#import <EventKit/EventKit.h>
 
 @interface ScheduledTripDetailsViewController ()
 
@@ -54,4 +55,63 @@
 }
 */
 
+- (IBAction)addToCelenderButtonPressed:(id)sender {
+    
+    EKEventStore *eventDB = [[EKEventStore alloc] init];
+    
+    if([eventDB respondsToSelector:@selector(requestAccessToEntityType:completion:)])
+        
+    {
+        [eventDB requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error)
+        {
+            
+            
+            if(granted)
+            {
+                EKEvent *myEvent  = [EKEvent eventWithEventStore:eventDB];
+                
+                myEvent.title     = self.detailsTripDescriptionText;
+                myEvent.startDate = self.detailsTripDateText;
+                myEvent.endDate   = self.detailsTripDateText;
+                myEvent.allDay = YES;
+                
+                [myEvent setCalendar:[eventDB defaultCalendarForNewEvents]];
+                
+                NSError *err;
+                
+                if (err == noErr) {
+                    UIAlertView *alert = [[UIAlertView alloc]
+                                          initWithTitle:self.detailsTripDescriptionText
+                                          message:@"Trip has been added to Calender!"
+                                          delegate:nil
+                                          cancelButtonTitle:@"Okay"
+                                          otherButtonTitles:nil];
+                    [alert show];
+                }else{
+                    UIAlertView *alert = [[UIAlertView alloc]
+                                          initWithTitle:@"Error"
+                                          message:@"Permission Denied"
+                                          delegate:nil
+                                          cancelButtonTitle:@"Okay"
+                                          otherButtonTitles:nil];
+                    [alert show];
+                }
+                
+            }
+            else
+            {
+                UIAlertView *alert = [[UIAlertView alloc]
+                                      initWithTitle:@"Error"
+                                      message:@"Permission Denied"
+                                      delegate:nil
+                                      cancelButtonTitle:@"Okay"
+                                      otherButtonTitles:nil];
+                [alert show];
+            }
+            
+        }];
+    }
+    
+    
+}
 @end

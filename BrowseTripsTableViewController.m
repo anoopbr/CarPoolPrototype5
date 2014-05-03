@@ -186,8 +186,10 @@
     }
     
     // Configure the cell
-    cell.fromLabel.text = [object objectForKey:self.fromObjectArray];
-    cell.toLabel.text = [object objectForKey:self.toObjectArray];
+    
+    NSMutableString *tripPlace = [NSString stringWithFormat: @"%@ to %@", [object objectForKey:self.fromObjectArray], [object objectForKey:self.toObjectArray]];
+    
+    cell.fromLabel.text = tripPlace;
     cell.dateLabel.text = [NSString stringWithFormat:@"%@",[object objectForKey:self.dateObjectArray]];
     cell.descriptionLabel.text = [object objectForKey:self.descriptionObjectArray];
     NSLog(@"%@",[NSString stringWithFormat:@"%@",[object objectForKey:@"Id"]]);

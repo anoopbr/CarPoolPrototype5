@@ -82,6 +82,7 @@
 		6E337E3F18DA7B4600654210 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337E3E18DA7B4600654210 /* CoreData.framework */; };
 		6E337E4118DA7C0400654210 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337E4018DA7C0400654210 /* libz.1.1.3.dylib */; };
 		6E39616318FC793D002F3430 /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E39616218FC793D002F3430 /* ResetPasswordViewController.m */; };
+		6E39616518FC81BF002F3430 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E39616418FC81BF002F3430 /* EventKit.framework */; };
 		6EB6234518F898FA004B9533 /* CompleteProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB6234418F898FA004B9533 /* CompleteProfileViewController.m */; };
 		6EB6234718F8B034004B9533 /* register-form.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB6234618F8B034004B9533 /* register-form.png */; };
 		6EB6234918F8B2D1004B9533 /* save-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB6234818F8B2D1004B9533 /* save-btn.png */; };
@@ -213,6 +214,7 @@
 		6E337E4018DA7C0400654210 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		6E39616118FC793D002F3430 /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
 		6E39616218FC793D002F3430 /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
+		6E39616418FC81BF002F3430 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		6EB6234318F898FA004B9533 /* CompleteProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteProfileViewController.h; sourceTree = "<group>"; };
 		6EB6234418F898FA004B9533 /* CompleteProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteProfileViewController.m; sourceTree = "<group>"; };
 		6EB6234618F8B034004B9533 /* register-form.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "register-form.png"; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E39616518FC81BF002F3430 /* EventKit.framework in Frameworks */,
 				6EB6235018F9ACC4004B9533 /* Parse.framework in Frameworks */,
 				6EB6234E18F9ACBB004B9533 /* FacebookSDK.framework in Frameworks */,
 				6E0ED42E18F71F1B002EC961 /* AssetsLibrary.framework in Frameworks */,
@@ -390,6 +393,7 @@
 		6E337DD418DA5D2E00654210 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6E39616418FC81BF002F3430 /* EventKit.framework */,
 				6EB6234F18F9ACC4004B9533 /* Parse.framework */,
 				6EB6234D18F9ACBB004B9533 /* FacebookSDK.framework */,
 				6E0ED42D18F71F1B002EC961 /* AssetsLibrary.framework */,
@@ -422,6 +426,8 @@
 		6E337DDB18DA5D2E00654210 /* CarPoolPrototype5 */ = {
 			isa = PBXGroup;
 			children = (
+				6EE6972B19154BDD0070FFB5 /* Storyboard */,
+				6EE6972719154B940070FFB5 /* Feedback */,
 				6E0ED3DF18F4A777002EC961 /* Map */,
 				6E0ED3D518F48F33002EC961 /* My Trips */,
 				6E14109618F1D6D80080448F /* Browse Trips */,
@@ -430,7 +436,6 @@
 				6EC24D8F18E8938D00964F31 /* UserProfile */,
 				6EC24D8818E61FFA00964F31 /* MBProgressHUD */,
 				6E2C92FE18DF76E900C2CFC7 /* AMSlideMenu */,
-				6E337DE718DA5D2E00654210 /* Main.storyboard */,
 				6E337DE418DA5D2E00654210 /* AppDelegate.h */,
 				6E337DE518DA5D2E00654210 /* AppDelegate.m */,
 				6E337DEA18DA5D2E00654210 /* ViewController.h */,
@@ -521,6 +526,22 @@
 				6E0ED42B18F71A75002EC961 /* PhotoUploaderViewController.m */,
 			);
 			name = UserProfile;
+			sourceTree = "<group>";
+		};
+		6EE6972719154B940070FFB5 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Feedback;
+			sourceTree = "<group>";
+		};
+		6EE6972B19154BDD0070FFB5 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6E337DE718DA5D2E00654210 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -715,6 +736,7 @@
 				6E337DE818DA5D2E00654210 /* Base */,
 			);
 			name = Main.storyboard;
+			path = CarPoolPrototype5;
 			sourceTree = "<group>";
 		};
 		6E337DFD18DA5D2E00654210 /* InfoPlist.strings */ = {

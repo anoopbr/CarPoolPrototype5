@@ -15,6 +15,10 @@
 @property (strong, nonatomic) IBOutlet UILabel *toLabel;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UILabel *descriptionLabel;
+- (IBAction)joinTrip:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *fromText;
+@property (weak, nonatomic) IBOutlet UITextField *toText;
+@property (weak, nonatomic) IBOutlet UITextView *commentText;
 
 @property (weak, nonatomic) PFObject *trip;
 
