@@ -55,6 +55,7 @@
         self.toObjectArray = @"To";
         self.dateObjectArray = @"Date";
         self.descriptionObjectArray = @"Description";
+        self.ObjectArray = @"objectId";
         
         
         // Whether the built-in pull-to-refresh is enabled
@@ -149,7 +150,11 @@
         query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     }
     
+    PFUser *currentuser = [PFUser currentUser];
+    
     [query orderByAscending:@"Date"];
+    [query whereKey:@"User" notEqualTo:currentuser];
+    [query whereKey:@"Seats" notEqualTo:@"0"];
     
     return query;
 }
@@ -192,6 +197,7 @@
     cell.fromLabel.text = tripPlace;
     cell.dateLabel.text = [NSString stringWithFormat:@"%@",[object objectForKey:self.dateObjectArray]];
     cell.descriptionLabel.text = [object objectForKey:self.descriptionObjectArray];
+    cell.objectLabel = [object valueForKey:self.ObjectArray];
     NSLog(@"%@",[NSString stringWithFormat:@"%@",[object objectForKey:@"Id"]]);
     return cell;
 }

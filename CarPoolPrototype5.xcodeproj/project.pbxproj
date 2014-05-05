@@ -83,6 +83,9 @@
 		6E337E4118DA7C0400654210 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E337E4018DA7C0400654210 /* libz.1.1.3.dylib */; };
 		6E39616318FC793D002F3430 /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E39616218FC793D002F3430 /* ResetPasswordViewController.m */; };
 		6E39616518FC81BF002F3430 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E39616418FC81BF002F3430 /* EventKit.framework */; };
+		6E8B1DAA191818D2007C743B /* MyTripsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1DA9191818D2007C743B /* MyTripsTableView.m */; };
+		6E8B1DAE1918237E007C743B /* DashboardTripsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1DAD1918237E007C743B /* DashboardTripsTableView.m */; };
+		6E8B1DB1191823AE007C743B /* DashboardTripsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1DB0191823AE007C743B /* DashboardTripsTableViewCell.m */; };
 		6EB6234518F898FA004B9533 /* CompleteProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB6234418F898FA004B9533 /* CompleteProfileViewController.m */; };
 		6EB6234718F8B034004B9533 /* register-form.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB6234618F8B034004B9533 /* register-form.png */; };
 		6EB6234918F8B2D1004B9533 /* save-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB6234818F8B2D1004B9533 /* save-btn.png */; };
@@ -90,6 +93,11 @@
 		6EB6234E18F9ACBB004B9533 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB6234D18F9ACBB004B9533 /* FacebookSDK.framework */; };
 		6EB6235018F9ACC4004B9533 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB6234F18F9ACC4004B9533 /* Parse.framework */; };
 		6EB6235418F9B0F4004B9533 /* background_page_white1_1136x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB6235318F9B0F4004B9533 /* background_page_white1_1136x640.png */; };
+		6EBF9C8C1915AD91001BC2E1 /* RateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBF9C8B1915AD91001BC2E1 /* RateView.m */; };
+		6EBF9C8F1915AF88001BC2E1 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBF9C8E1915AF88001BC2E1 /* FeedbackViewController.m */; };
+		6EBF9C9A1916883C001BC2E1 /* empty_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EBF9C971916883C001BC2E1 /* empty_star.png */; };
+		6EBF9C9B1916883C001BC2E1 /* full_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EBF9C981916883C001BC2E1 /* full_star.png */; };
+		6EBF9C9C1916883C001BC2E1 /* half_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EBF9C991916883C001BC2E1 /* half_star.png */; };
 		6EC24D7D18E5D14200964F31 /* background_page_white_1136x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC24D7C18E5D14200964F31 /* background_page_white_1136x640.png */; };
 		6EC24D8118E5D20500964F31 /* background_page_white_1136x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC24D8018E5D20500964F31 /* background_page_white_1136x640.png */; };
 		6EC24D8418E5D4E000964F31 /* TripDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC24D8318E5D4E000964F31 /* TripDetailViewController.m */; };
@@ -215,6 +223,12 @@
 		6E39616118FC793D002F3430 /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
 		6E39616218FC793D002F3430 /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
 		6E39616418FC81BF002F3430 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		6E8B1DA8191818D2007C743B /* MyTripsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTripsTableView.h; sourceTree = "<group>"; };
+		6E8B1DA9191818D2007C743B /* MyTripsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTripsTableView.m; sourceTree = "<group>"; };
+		6E8B1DAC1918237E007C743B /* DashboardTripsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardTripsTableView.h; sourceTree = "<group>"; };
+		6E8B1DAD1918237E007C743B /* DashboardTripsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardTripsTableView.m; sourceTree = "<group>"; };
+		6E8B1DAF191823AE007C743B /* DashboardTripsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardTripsTableViewCell.h; sourceTree = "<group>"; };
+		6E8B1DB0191823AE007C743B /* DashboardTripsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardTripsTableViewCell.m; sourceTree = "<group>"; };
 		6EB6234318F898FA004B9533 /* CompleteProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteProfileViewController.h; sourceTree = "<group>"; };
 		6EB6234418F898FA004B9533 /* CompleteProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteProfileViewController.m; sourceTree = "<group>"; };
 		6EB6234618F8B034004B9533 /* register-form.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "register-form.png"; sourceTree = "<group>"; };
@@ -224,6 +238,13 @@
 		6EB6234D18F9ACBB004B9533 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		6EB6234F18F9ACC4004B9533 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		6EB6235318F9B0F4004B9533 /* background_page_white1_1136x640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_page_white1_1136x640.png; sourceTree = "<group>"; };
+		6EBF9C8A1915AD91001BC2E1 /* RateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateView.h; sourceTree = "<group>"; };
+		6EBF9C8B1915AD91001BC2E1 /* RateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateView.m; sourceTree = "<group>"; };
+		6EBF9C8D1915AF88001BC2E1 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		6EBF9C8E1915AF88001BC2E1 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		6EBF9C971916883C001BC2E1 /* empty_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empty_star.png; sourceTree = "<group>"; };
+		6EBF9C981916883C001BC2E1 /* full_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = full_star.png; sourceTree = "<group>"; };
+		6EBF9C991916883C001BC2E1 /* half_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = half_star.png; sourceTree = "<group>"; };
 		6EC24D7C18E5D14200964F31 /* background_page_white_1136x640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_page_white_1136x640.png; path = "../../../Creative/iOS App Share a Ride/background_page_white_1136x640.png"; sourceTree = "<group>"; };
 		6EC24D8018E5D20500964F31 /* background_page_white_1136x640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_page_white_1136x640.png; sourceTree = "<group>"; };
 		6EC24D8218E5D4E000964F31 /* TripDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripDetailViewController.h; sourceTree = "<group>"; };
@@ -318,8 +339,6 @@
 		6E14109518F1D69C0080448F /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				6EF74D9918DA86B4002479C2 /* DashBoardViewController.h */,
-				6EF74D9A18DA86B4002479C2 /* DashBoardViewController.m */,
 				6E337E3B18DA625D00654210 /* LoginViewController.h */,
 				6E337E3C18DA625D00654210 /* LoginViewController.m */,
 				6E2C931818DF850D00C2CFC7 /* MainMenuViewController.h */,
@@ -427,6 +446,7 @@
 			isa = PBXGroup;
 			children = (
 				6EE6972B19154BDD0070FFB5 /* Storyboard */,
+				6E8B1DAB19182354007C743B /* Dashboard */,
 				6EE6972719154B940070FFB5 /* Feedback */,
 				6E0ED3DF18F4A777002EC961 /* Map */,
 				6E0ED3D518F48F33002EC961 /* My Trips */,
@@ -451,6 +471,7 @@
 		6E337DDC18DA5D2E00654210 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6EBF9C961915AFFF001BC2E1 /* Stars */,
 				6E337E0A18DA5D5400654210 /* background_page1_1136x640.png */,
 				6E14109018F07A3A0080448F /* background_page_2000x640.png */,
 				6E14109118F07A3A0080448F /* background_page1_2000x640.png */,
@@ -505,6 +526,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6E8B1DAB19182354007C743B /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				6EF74D9918DA86B4002479C2 /* DashBoardViewController.h */,
+				6EF74D9A18DA86B4002479C2 /* DashBoardViewController.m */,
+				6E8B1DAC1918237E007C743B /* DashboardTripsTableView.h */,
+				6E8B1DAD1918237E007C743B /* DashboardTripsTableView.m */,
+				6E8B1DAF191823AE007C743B /* DashboardTripsTableViewCell.h */,
+				6E8B1DB0191823AE007C743B /* DashboardTripsTableViewCell.m */,
+			);
+			name = Dashboard;
+			sourceTree = "<group>";
+		};
+		6EBF9C961915AFFF001BC2E1 /* Stars */ = {
+			isa = PBXGroup;
+			children = (
+				6EBF9C971916883C001BC2E1 /* empty_star.png */,
+				6EBF9C981916883C001BC2E1 /* full_star.png */,
+				6EBF9C991916883C001BC2E1 /* half_star.png */,
+			);
+			name = Stars;
+			sourceTree = "<group>";
+		};
 		6EC24D8818E61FFA00964F31 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -524,6 +568,8 @@
 				6E0ED3D318F44E32002EC961 /* UserProfileUpdateViewController.m */,
 				6E0ED42A18F71A75002EC961 /* PhotoUploaderViewController.h */,
 				6E0ED42B18F71A75002EC961 /* PhotoUploaderViewController.m */,
+				6E8B1DA8191818D2007C743B /* MyTripsTableView.h */,
+				6E8B1DA9191818D2007C743B /* MyTripsTableView.m */,
 			);
 			name = UserProfile;
 			sourceTree = "<group>";
@@ -531,6 +577,10 @@
 		6EE6972719154B940070FFB5 /* Feedback */ = {
 			isa = PBXGroup;
 			children = (
+				6EBF9C8A1915AD91001BC2E1 /* RateView.h */,
+				6EBF9C8B1915AD91001BC2E1 /* RateView.m */,
+				6EBF9C8D1915AF88001BC2E1 /* FeedbackViewController.h */,
+				6EBF9C8E1915AF88001BC2E1 /* FeedbackViewController.m */,
 			);
 			name = Feedback;
 			sourceTree = "<group>";
@@ -642,13 +692,16 @@
 				6E2C931E18DF974400C2CFC7 /* icon-menu@2x.png in Resources */,
 				6EC24D7D18E5D14200964F31 /* background_page_white_1136x640.png in Resources */,
 				6E2C92A018DB93F100C2CFC7 /* profile_icon.png in Resources */,
+				6EBF9C9A1916883C001BC2E1 /* empty_star.png in Resources */,
 				6EB6234718F8B034004B9533 /* register-form.png in Resources */,
 				6E337DE018DA5D2E00654210 /* InfoPlist.strings in Resources */,
 				6E337E1A18DA5D5400654210 /* loading_page_1136x640.png in Resources */,
 				6E2C932418DFDF8300C2CFC7 /* navbar.png in Resources */,
 				6E2C929B18DB93A300C2CFC7 /* browse-icon.png in Resources */,
 				6E337DE918DA5D2E00654210 /* Main.storyboard in Resources */,
+				6EBF9C9C1916883C001BC2E1 /* half_star.png in Resources */,
 				6E2C929118DB7BCC00C2CFC7 /* icon_80.png in Resources */,
+				6EBF9C9B1916883C001BC2E1 /* full_star.png in Resources */,
 				6E2C933018E1CF4200C2CFC7 /* Person1.png in Resources */,
 				6E337E1718DA5D5400654210 /* loading_page_640x960.png in Resources */,
 			);
@@ -674,13 +727,18 @@
 				6E02070518E3BDB000C5322D /* BrowseTripsTableViewCell.m in Sources */,
 				6EB6234C18F97E8D004B9533 /* UploadImageViewController.m in Sources */,
 				6E337E3D18DA625D00654210 /* LoginViewController.m in Sources */,
+				6EBF9C8F1915AF88001BC2E1 /* FeedbackViewController.m in Sources */,
 				6E337DEC18DA5D2E00654210 /* ViewController.m in Sources */,
 				6E0ED3E218F4A7B6002EC961 /* MapPoint.m in Sources */,
 				6E0ED3DB18F49158002EC961 /* MyTripTableViewCell.m in Sources */,
 				6EB6234518F898FA004B9533 /* CompleteProfileViewController.m in Sources */,
+				6E8B1DAE1918237E007C743B /* DashboardTripsTableView.m in Sources */,
+				6E8B1DAA191818D2007C743B /* MyTripsTableView.m in Sources */,
 				6E2C931A18DF850D00C2CFC7 /* MainMenuViewController.m in Sources */,
+				6E8B1DB1191823AE007C743B /* DashboardTripsTableViewCell.m in Sources */,
 				6E0ED3D818F49108002EC961 /* MyTripsTableViewController.m in Sources */,
 				6EF74D9B18DA86B4002479C2 /* DashBoardViewController.m in Sources */,
+				6EBF9C8C1915AD91001BC2E1 /* RateView.m in Sources */,
 				6EC24D8718E61FDC00964F31 /* MBProgressHUD.m in Sources */,
 				6E02070218E3BC6C00C5322D /* BrowseTripsTableViewController.m in Sources */,
 				6E2C931318DF76E900C2CFC7 /* AMSlideMenuRightTableViewController.m in Sources */,

@@ -27,6 +27,38 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // For dashboard view - Added by anoop - Begin
+    
+    PFUser *user = [PFUser currentUser];
+    
+    NSLog(@"%@",user);
+    
+    NSString *first = user[@"first"];
+    NSString *last = user[@"last"];
+    NSString *aboutme = user[@"aboutme"];
+    NSString *phone = user[@"phone"];
+    NSString *gender = user[@"gender"];
+    NSString *place = user[@"place"];
+    NSMutableString *name = [NSString stringWithFormat: @"%@ %@", first, last];
+    NSDate *dob = user[@"createdAt"];
+    PFFile *userImageFile = user[@"image"];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MM/dd/yyyy"];
+    
+    NSString *date = [dateFormatter stringFromDate:dob];
+    
+    self.nameLabel.text = name;
+    self.placeLabel.text = place;
+    [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+        if (!error) {
+            _profilePic.image = [UIImage imageWithData:imageData];
+        }
+    }];
+    
+    // For dashboard view - Added by anoop - End
+    
     // Do any additional setup after loading the view.
     [[self locationManager] startUpdatingLocation];
 	CLLocation *location = self->locationManager.location;

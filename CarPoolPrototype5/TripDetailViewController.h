@@ -15,6 +15,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *toLabel;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (strong, nonatomic) NSString *objectLabel;
+
 - (IBAction)joinTrip:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *fromText;
 @property (weak, nonatomic) IBOutlet UITextField *toText;

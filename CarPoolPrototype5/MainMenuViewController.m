@@ -29,7 +29,7 @@
             identifier = @"DashBoardSegue";
             break;
         case 1:
-            identifier = @"ProfileSegue";
+            identifier = @"DashBoardSegue";
             break;
         case 2:
             identifier = @"TripsSegue";

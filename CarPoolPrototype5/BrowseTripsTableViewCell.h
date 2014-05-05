@@ -14,5 +14,7 @@
 @property (strong,nonatomic) IBOutlet UILabel *toLabel;
 @property (strong,nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong,nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (strong,nonatomic) NSString *objectLabel;
+
 
 @end
