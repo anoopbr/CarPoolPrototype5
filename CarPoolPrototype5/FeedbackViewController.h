@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RateView.h"
+#import <Parse/Parse.h>
 
 @interface FeedbackViewController : UIViewController <RateViewDelegate>
 
@@ -16,5 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *commentText;
 
 - (IBAction)submitFeedback:(id)sender;
+
+@property (weak, nonatomic) PFObject *trip;
 
 @end

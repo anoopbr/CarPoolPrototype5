@@ -9,6 +9,9 @@
 #import "FeedbackViewController.h"
 #import <Parse/Parse.h>
 
+
+NSString *tripId;
+
 @interface FeedbackViewController ()
 
 @end
@@ -34,6 +37,12 @@
     self.rateView.editable = YES;
     self.rateView.maxRating = 5;
     self.rateView.delegate = self;
+    
+    tripId = [self.trip objectId];
+    
+    NSLog(tripId);
+    NSLog(@"tripid");
+
 }
 
 - (void)viewDidUnload
@@ -78,7 +87,7 @@
     PFQuery *query = [PFQuery queryWithClassName:@"TripDetails"];
     
     // Retrieve the object by id
-    [query getObjectInBackgroundWithId:@"maeOBJ3DYb" block:^(PFObject *trip, NSError *error) {
+    [query getObjectInBackgroundWithId:tripId block:^(PFObject *trip, NSError *error) {
         
         // Now let's update it with some new data. In this case, only cheatMode and score
         // will get sent to the cloud. playerName hasn't changed.

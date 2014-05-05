@@ -7,6 +7,7 @@
 //
 
 #import "MyTripViewController.h"
+#import "FeedbackViewController.h"
 
 @interface MyTripViewController ()
 
@@ -42,6 +43,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"LeaveFeedbackSugue"]) {
+        
+        NSLog(@"LeaveFeedbackSugue Pressed");
+        
+        
+        FeedbackViewController *detailViewController = [segue destinationViewController];
+        detailViewController.trip = self.trip;
+        
+    }
 }
 
 
