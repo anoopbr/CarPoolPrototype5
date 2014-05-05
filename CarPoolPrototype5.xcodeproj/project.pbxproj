@@ -86,6 +86,10 @@
 		6E8B1DAA191818D2007C743B /* MyTripsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1DA9191818D2007C743B /* MyTripsTableView.m */; };
 		6E8B1DAE1918237E007C743B /* DashboardTripsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1DAD1918237E007C743B /* DashboardTripsTableView.m */; };
 		6E8B1DB1191823AE007C743B /* DashboardTripsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1DB0191823AE007C743B /* DashboardTripsTableViewCell.m */; };
+		6E8B1DB519183814007C743B /* RequestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1DB419183814007C743B /* RequestTableViewController.m */; };
+		6E8B1DB91918382B007C743B /* ApprovalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1DB81918382B007C743B /* ApprovalTableViewController.m */; };
+		6E8B1DBC19183844007C743B /* RequestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1DBB19183844007C743B /* RequestTableViewCell.m */; };
+		6E8B1DBF19183854007C743B /* ApprovalsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1DBE19183854007C743B /* ApprovalsTableViewCell.m */; };
 		6EB6234518F898FA004B9533 /* CompleteProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB6234418F898FA004B9533 /* CompleteProfileViewController.m */; };
 		6EB6234718F8B034004B9533 /* register-form.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB6234618F8B034004B9533 /* register-form.png */; };
 		6EB6234918F8B2D1004B9533 /* save-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB6234818F8B2D1004B9533 /* save-btn.png */; };
@@ -229,6 +233,14 @@
 		6E8B1DAD1918237E007C743B /* DashboardTripsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardTripsTableView.m; sourceTree = "<group>"; };
 		6E8B1DAF191823AE007C743B /* DashboardTripsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardTripsTableViewCell.h; sourceTree = "<group>"; };
 		6E8B1DB0191823AE007C743B /* DashboardTripsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardTripsTableViewCell.m; sourceTree = "<group>"; };
+		6E8B1DB319183814007C743B /* RequestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestTableViewController.h; sourceTree = "<group>"; };
+		6E8B1DB419183814007C743B /* RequestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestTableViewController.m; sourceTree = "<group>"; };
+		6E8B1DB71918382B007C743B /* ApprovalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApprovalTableViewController.h; sourceTree = "<group>"; };
+		6E8B1DB81918382B007C743B /* ApprovalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApprovalTableViewController.m; sourceTree = "<group>"; };
+		6E8B1DBA19183844007C743B /* RequestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestTableViewCell.h; sourceTree = "<group>"; };
+		6E8B1DBB19183844007C743B /* RequestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestTableViewCell.m; sourceTree = "<group>"; };
+		6E8B1DBD19183854007C743B /* ApprovalsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApprovalsTableViewCell.h; sourceTree = "<group>"; };
+		6E8B1DBE19183854007C743B /* ApprovalsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApprovalsTableViewCell.m; sourceTree = "<group>"; };
 		6EB6234318F898FA004B9533 /* CompleteProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteProfileViewController.h; sourceTree = "<group>"; };
 		6EB6234418F898FA004B9533 /* CompleteProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteProfileViewController.m; sourceTree = "<group>"; };
 		6EB6234618F8B034004B9533 /* register-form.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "register-form.png"; sourceTree = "<group>"; };
@@ -446,6 +458,7 @@
 			isa = PBXGroup;
 			children = (
 				6EE6972B19154BDD0070FFB5 /* Storyboard */,
+				6E8B1DB2191837F0007C743B /* Join Trip */,
 				6E8B1DAB19182354007C743B /* Dashboard */,
 				6EE6972719154B940070FFB5 /* Feedback */,
 				6E0ED3DF18F4A777002EC961 /* Map */,
@@ -537,6 +550,21 @@
 				6E8B1DB0191823AE007C743B /* DashboardTripsTableViewCell.m */,
 			);
 			name = Dashboard;
+			sourceTree = "<group>";
+		};
+		6E8B1DB2191837F0007C743B /* Join Trip */ = {
+			isa = PBXGroup;
+			children = (
+				6E8B1DB319183814007C743B /* RequestTableViewController.h */,
+				6E8B1DB419183814007C743B /* RequestTableViewController.m */,
+				6E8B1DB71918382B007C743B /* ApprovalTableViewController.h */,
+				6E8B1DB81918382B007C743B /* ApprovalTableViewController.m */,
+				6E8B1DBA19183844007C743B /* RequestTableViewCell.h */,
+				6E8B1DBB19183844007C743B /* RequestTableViewCell.m */,
+				6E8B1DBD19183854007C743B /* ApprovalsTableViewCell.h */,
+				6E8B1DBE19183854007C743B /* ApprovalsTableViewCell.m */,
+			);
+			name = "Join Trip";
 			sourceTree = "<group>";
 		};
 		6EBF9C961915AFFF001BC2E1 /* Stars */ = {
@@ -730,6 +758,7 @@
 				6EBF9C8F1915AF88001BC2E1 /* FeedbackViewController.m in Sources */,
 				6E337DEC18DA5D2E00654210 /* ViewController.m in Sources */,
 				6E0ED3E218F4A7B6002EC961 /* MapPoint.m in Sources */,
+				6E8B1DB519183814007C743B /* RequestTableViewController.m in Sources */,
 				6E0ED3DB18F49158002EC961 /* MyTripTableViewCell.m in Sources */,
 				6EB6234518F898FA004B9533 /* CompleteProfileViewController.m in Sources */,
 				6E8B1DAE1918237E007C743B /* DashboardTripsTableView.m in Sources */,
@@ -741,6 +770,7 @@
 				6EBF9C8C1915AD91001BC2E1 /* RateView.m in Sources */,
 				6EC24D8718E61FDC00964F31 /* MBProgressHUD.m in Sources */,
 				6E02070218E3BC6C00C5322D /* BrowseTripsTableViewController.m in Sources */,
+				6E8B1DB91918382B007C743B /* ApprovalTableViewController.m in Sources */,
 				6E2C931318DF76E900C2CFC7 /* AMSlideMenuRightTableViewController.m in Sources */,
 				6E14109918F229010080448F /* ScheduledTripDetailsViewController.m in Sources */,
 				6E2C931018DF76E900C2CFC7 /* AMSlideMenuLeftTableViewController.m in Sources */,
@@ -754,9 +784,11 @@
 				6E2C932918E1BE9A00C2CFC7 /* MapViewController.m in Sources */,
 				6E39616318FC793D002F3430 /* ResetPasswordViewController.m in Sources */,
 				6E2C931118DF76E900C2CFC7 /* AMSlideMenuMainViewController.m in Sources */,
+				6E8B1DBC19183844007C743B /* RequestTableViewCell.m in Sources */,
 				6E337DE618DA5D2E00654210 /* AppDelegate.m in Sources */,
 				6E337DE218DA5D2E00654210 /* main.m in Sources */,
 				6EFA99B718DB5A9200B414A0 /* UserProfileViewController.m in Sources */,
+				6E8B1DBF19183854007C743B /* ApprovalsTableViewCell.m in Sources */,
 				6E0ED3D418F44E32002EC961 /* UserProfileUpdateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
