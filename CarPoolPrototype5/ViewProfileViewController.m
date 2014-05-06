@@ -29,14 +29,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSLog(@"tripid");
-    NSLog(self.tripOwner);
+//    NSLog(@"%@",self.trip);
+//    NSString *userid = [self.trip valueForKey:@"User"];
+//    NSLog(@"%@",userid);
+//    
+//    PFQuery *teamQuery = [PFQuery queryWithClassName:@"Trips"];
+//    [teamQuery whereKey:@"objectId" equalTo:[self.trip ]];
+//    
+//    PFQuery *userQuery = [PFQuery queryForUser];
+//    [userQuery whereKey:@"objectId" matchesKey:@"User" inQuery:teamQuery];
     
     PFUser *user = [PFUser currentUser];
     
-    PFQuery *query = [PFUser query];
+//    PFQuery *query = [PFUser query];
     
-    [query getObjectWithId:user];
+//    [query getObjectWithId:user];
     
     NSLog(@"%@",user);
     

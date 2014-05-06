@@ -59,7 +59,6 @@
     
     // For dashboard view - Added by anoop - End
     
-    // Do any additional setup after loading the view.
     [[self locationManager] startUpdatingLocation];
 	CLLocation *location = self->locationManager.location;
 	if (!location) {
@@ -69,26 +68,13 @@
 	// Configure the new event with information from the location.
 	CLLocationCoordinate2D coordinate = [location coordinate];
     PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude longitude:coordinate.longitude];
-    PFObject *object = [PFObject objectWithClassName:@"Location"];
-    [object setObject:geoPoint forKey:@"location"];
-    PFUser *currentUser = [PFUser currentUser];
-    PFObject *userobject = [PFObject objectWithClassName:@"Location"];
-    [userobject setObject:currentUser forKey:@"UserID"];
     
-    PFObject *userLoc = [PFObject objectWithClassName:@"Location"];
-    
-    userLoc[@"UserID"] = currentUser.objectId;
-    
-    [userLoc saveInBackground];
-    
-    NSLog(@"%@",currentUser.username);
-    
-    [object saveEventually:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            // Reload the PFQueryTableViewController
-        }
-    }];
-    
+    PFObject *userlocation = [PFObject objectWithClassName:@"Userlocations"];
+    userlocation[@"UserLocation"] = geoPoint;
+    userlocation[@"User"] = user;
+    [user setObject: geoPoint forKey: @"location"];
+    [user saveInBackground ];
+    [userlocation saveInBackground];
 }
 
 /**

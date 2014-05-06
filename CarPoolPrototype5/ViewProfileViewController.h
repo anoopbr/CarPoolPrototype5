@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface ViewProfileViewController : UIViewController
 
@@ -17,6 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *about;
 
 
-@property (weak, nonatomic) NSString *tripOwner;
+@property (weak, nonatomic) PFObject *trip;
 
 @end

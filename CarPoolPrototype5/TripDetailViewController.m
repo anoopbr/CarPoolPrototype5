@@ -119,25 +119,11 @@ NSString *tripid;
         
         NSLog(@"Segue Pressed view user");
         
-        
+        ViewProfileViewController *detailViewController = [segue destinationViewController];
         
         NSLog(@"tripid");
         NSLog(_objectLabel);
-        PFQuery *query = [PFQuery queryWithClassName:@"Trips"];
-        [query getObjectInBackgroundWithId:_objectLabel block:^(PFObject *trip, NSError *error) {
-            // Do something with the returned PFObject in the gameScore variable.
-            if(!error){
-                NSLog(@"%@", trip);
-                ViewProfileViewController *detailViewController = [segue destinationViewController];
-                detailViewController.tripOwner = [self.trip objectForKey:@"User"] ;
-            }else{
-                NSString *errorString = [error userInfo][@"error"];
-                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:errorString delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                [alert show];
-            }
-            
-        }];
-        
+        detailViewController.trip = self.trip;
         
     }else if ([[segue identifier] isEqualToString:@"JoinTrip"]) {
         
@@ -145,6 +131,7 @@ NSString *tripid;
         
         
         TripDetailViewController *tripDetail = [segue destinationViewController];
+        
         
         TripDetailViewController *detailViewController = [segue destinationViewController];
         detailViewController.trip = self.trip;
