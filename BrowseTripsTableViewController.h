@@ -17,6 +17,12 @@
 @property (nonatomic, strong) NSArray *toObjectArray;
 @property (nonatomic, strong) NSArray *dateObjectArray;
 @property (nonatomic, strong) NSArray *descriptionObjectArray;
+
+@property (nonatomic, strong) NSArray *seacrhfromObjectArray;
+@property (nonatomic, strong) NSArray *seacrhtoObjectArray;
+@property (nonatomic, strong) NSArray *seacrhdateObjectArray;
+@property (nonatomic, strong) NSArray *seacrhdescriptionObjectArray;
+
 @property (nonatomic, strong) NSArray *ObjectArray;
 
 @end

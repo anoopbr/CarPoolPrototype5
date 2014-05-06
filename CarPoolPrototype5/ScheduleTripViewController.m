@@ -157,7 +157,8 @@ NSString *dateText;
     trip[@"To"] = toPlace.text;
     trip[@"Date"] = myDate;
     trip[@"User"] = user;
-    trip[@"Seats"] = seatLabel.text;
+    int value = [seatLabel.text intValue];
+    trip[@"Seats"] = @(value);
     trip[@"Description"] = description.text;
 
     [trip saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

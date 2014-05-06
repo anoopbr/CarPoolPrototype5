@@ -149,10 +149,16 @@
         query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     }
     
+    
+    
     PFUser *userid = [PFUser currentUser];
     NSLog(@"user : %@",userid.objectId);
 
     [query whereKey:@"user" equalTo:userid];
+    
+    [query whereKey:@"date" greaterThanOrEqualTo:[NSDate date]];
+    [query whereKey:@"status" notEqualTo:@"Pending"];
+    [query whereKey:@"status" notEqualTo:@"Completed"];
     [query orderByAscending:@"date"];
 
     

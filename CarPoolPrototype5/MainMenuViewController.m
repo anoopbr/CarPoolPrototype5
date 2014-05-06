@@ -25,11 +25,8 @@
     
     NSString *identifier;
     switch (indexPath.row) {
-        case 0:
-            identifier = @"DashBoardSegue";
-            break;
         case 1:
-            identifier = @"DashBoardSegue";
+            identifier = @"ProfileSegue";
             break;
         case 2:
             identifier = @"TripsSegue";
@@ -39,6 +36,9 @@
             break;
         case 4:
             identifier = @"BrowseSegue";
+            break;
+        default:
+            identifier = @"ProfileSegue";
             break;
     }
     

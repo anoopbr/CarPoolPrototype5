@@ -106,6 +106,7 @@
 		6EC24D8118E5D20500964F31 /* background_page_white_1136x640.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC24D8018E5D20500964F31 /* background_page_white_1136x640.png */; };
 		6EC24D8418E5D4E000964F31 /* TripDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC24D8318E5D4E000964F31 /* TripDetailViewController.m */; };
 		6EC24D8718E61FDC00964F31 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC24D8618E61FDC00964F31 /* MBProgressHUD.m */; };
+		6EE8033019190E7B00E52655 /* ViewProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE8032F19190E7B00E52655 /* ViewProfileViewController.m */; };
 		6EF74D9818DA801A002479C2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF74D9718DA801A002479C2 /* RegisterViewController.m */; };
 		6EF74D9B18DA86B4002479C2 /* DashBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF74D9A18DA86B4002479C2 /* DashBoardViewController.m */; };
 		6EFA99B718DB5A9200B414A0 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA99B618DB5A9200B414A0 /* UserProfileViewController.m */; };
@@ -263,6 +264,8 @@
 		6EC24D8318E5D4E000964F31 /* TripDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripDetailViewController.m; sourceTree = "<group>"; };
 		6EC24D8518E61FDC00964F31 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		6EC24D8618E61FDC00964F31 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		6EE8032E19190E7B00E52655 /* ViewProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewProfileViewController.h; sourceTree = "<group>"; };
+		6EE8032F19190E7B00E52655 /* ViewProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewProfileViewController.m; sourceTree = "<group>"; };
 		6EF74D9618DA801A002479C2 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		6EF74D9718DA801A002479C2 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		6EF74D9918DA86B4002479C2 /* DashBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardViewController.h; sourceTree = "<group>"; };
@@ -353,8 +356,6 @@
 			children = (
 				6E337E3B18DA625D00654210 /* LoginViewController.h */,
 				6E337E3C18DA625D00654210 /* LoginViewController.m */,
-				6E2C931818DF850D00C2CFC7 /* MainMenuViewController.h */,
-				6E2C931918DF850D00C2CFC7 /* MainMenuViewController.m */,
 				6EF74D9618DA801A002479C2 /* RegisterViewController.h */,
 				6EF74D9718DA801A002479C2 /* RegisterViewController.m */,
 				6EB6234318F898FA004B9533 /* CompleteProfileViewController.h */,
@@ -458,6 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				6EE6972B19154BDD0070FFB5 /* Storyboard */,
+				6EE8032D19190E4800E52655 /* View User */,
 				6E8B1DB2191837F0007C743B /* Join Trip */,
 				6E8B1DAB19182354007C743B /* Dashboard */,
 				6EE6972719154B940070FFB5 /* Feedback */,
@@ -542,6 +544,8 @@
 		6E8B1DAB19182354007C743B /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				6E2C931818DF850D00C2CFC7 /* MainMenuViewController.h */,
+				6E2C931918DF850D00C2CFC7 /* MainMenuViewController.m */,
 				6EF74D9918DA86B4002479C2 /* DashBoardViewController.h */,
 				6EF74D9A18DA86B4002479C2 /* DashBoardViewController.m */,
 				6E8B1DAC1918237E007C743B /* DashboardTripsTableView.h */,
@@ -620,6 +624,15 @@
 			);
 			name = Storyboard;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		6EE8032D19190E4800E52655 /* View User */ = {
+			isa = PBXGroup;
+			children = (
+				6EE8032E19190E7B00E52655 /* ViewProfileViewController.h */,
+				6EE8032F19190E7B00E52655 /* ViewProfileViewController.m */,
+			);
+			name = "View User";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -787,6 +800,7 @@
 				6E8B1DBC19183844007C743B /* RequestTableViewCell.m in Sources */,
 				6E337DE618DA5D2E00654210 /* AppDelegate.m in Sources */,
 				6E337DE218DA5D2E00654210 /* main.m in Sources */,
+				6EE8033019190E7B00E52655 /* ViewProfileViewController.m in Sources */,
 				6EFA99B718DB5A9200B414A0 /* UserProfileViewController.m in Sources */,
 				6E8B1DBF19183854007C743B /* ApprovalsTableViewCell.m in Sources */,
 				6E0ED3D418F44E32002EC961 /* UserProfileUpdateViewController.m in Sources */,

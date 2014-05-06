@@ -154,7 +154,8 @@
     
     [query orderByAscending:@"Date"];
     [query whereKey:@"User" notEqualTo:currentuser];
-    [query whereKey:@"Seats" notEqualTo:@"0"];
+    [query whereKey:@"Date" greaterThanOrEqualTo:[NSDate date]];
+//    [query whereKey:@"Seats" notEqualTo:@"0"];
     
     return query;
 }

@@ -7,6 +7,10 @@
 //
 
 #import "TripDetailViewController.h"
+#import "ViewProfileViewController.h"
+
+
+NSString *tripid;
 
 @interface TripDetailViewController ()
 
@@ -33,21 +37,26 @@
     _dateLabel.text = [NSString stringWithFormat:@"%@",[self.trip objectForKey:@"Date"]];
     _descriptionLabel.text = [self.trip objectForKey:@"Description"];
     
+    tripid = [self.trip objectForKey:@"tripid"];
+    NSLog(@"tripid");
+    NSLog(tripid);
+    
     self.navigationItem.title =  [NSString stringWithFormat:@"%@",[self.trip objectForKey:@"Description"]];
 
     _objectLabel = [self.trip valueForKey:@"objectId"];
     if(_objectLabel == NULL)
     {
-        
         _objectLabel = self.objectLabel;
-        NSLog(@"ahi km nai : ");
         NSLog(_objectLabel);
     }
     else
     {
-        NSLog(@"ahi nndkndk njfkdnfk : ");
         NSLog(_objectLabel);
     }
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
     
 }
 
@@ -80,6 +89,7 @@
     trip[@"comment"] = self.commentText.text;
     trip[@"user"] = user;
     trip[@"status"] = @"Pending";
+    trip[@"date"] = [self.trip objectForKey:@"Date"];
     
     _objectLabel = [self.trip valueForKey:@"objectId"];
     
@@ -105,17 +115,49 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([[segue identifier] isEqualToString:@"JoinTrip"]) {
+    if ([[segue identifier] isEqualToString:@"ViewUser"]) {
+        
+        NSLog(@"Segue Pressed view user");
+        
+        
+        
+        NSLog(@"tripid");
+        NSLog(_objectLabel);
+        PFQuery *query = [PFQuery queryWithClassName:@"Trips"];
+        [query getObjectInBackgroundWithId:_objectLabel block:^(PFObject *trip, NSError *error) {
+            // Do something with the returned PFObject in the gameScore variable.
+            if(!error){
+                NSLog(@"%@", trip);
+                ViewProfileViewController *detailViewController = [segue destinationViewController];
+                detailViewController.tripOwner = [self.trip objectForKey:@"User"] ;
+            }else{
+                NSString *errorString = [error userInfo][@"error"];
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:errorString delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+            }
+            
+        }];
+        
+        
+    }else if ([[segue identifier] isEqualToString:@"JoinTrip"]) {
         
         NSLog(@"Segue Pressed join trip");
         
         
         TripDetailViewController *tripDetail = [segue destinationViewController];
         
-        
         TripDetailViewController *detailViewController = [segue destinationViewController];
         detailViewController.trip = self.trip;
         
     }
 }
+
+- (void) dismissKeyboard{
+    
+    [self.fromText resignFirstResponder];
+    [self.toText resignFirstResponder];
+    [self.commentText resignFirstResponder];
+    
+}
+
 @end

@@ -32,7 +32,7 @@
     _fromLabel.text = [self.trip objectForKey:@"from"];
     _toLabel.text = [self.trip objectForKey:@"to"];
     _dateLabel.text = [NSString stringWithFormat:@"%@",[self.trip objectForKey:@"date"]];
-    _descriptionLabel.text = [self.trip objectForKey:@"status"];
+    _descriptionLabel.text = [self.trip objectForKey:@"comment"];
     
     self.navigationItem.title =  [NSString stringWithFormat:@"%@",[self.trip objectForKey:@"comment"]];
     

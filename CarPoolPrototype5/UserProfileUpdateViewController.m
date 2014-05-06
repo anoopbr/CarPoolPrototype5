@@ -101,6 +101,8 @@
     [user saveInBackground];
     [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if(!error){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Profile updated successfully!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
             [self dismissViewControllerAnimated:YES completion:NULL];
             
         }else{
