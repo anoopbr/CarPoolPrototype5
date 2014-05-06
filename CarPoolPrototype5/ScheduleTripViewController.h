@@ -22,6 +22,9 @@
 @property (strong, nonatomic) IBOutlet UISlider *seatSlider;
 @property (strong, nonatomic) IBOutlet UILabel *seatLabel;
 
+@property (weak, nonatomic) NSString *tripFromPlaceText;
+@property (weak, nonatomic) NSString *tripToPlaceText;
+
 
 - (IBAction)submitTrip:(id)sender;
 - (IBAction)seatSliderMoved:(id)sender;

@@ -38,8 +38,8 @@ NSString *dateText;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    fromPlace.text = @"";
-    toPlace.text = @"";
+    fromPlace.text = self.tripFromPlaceText;
+    toPlace.text = self.tripToPlaceText;
     description.text = @"";
     dateField.text = @"";
     seatLabel.text = @"0";

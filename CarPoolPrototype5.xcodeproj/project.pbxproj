@@ -90,6 +90,12 @@
 		6E8B1DB91918382B007C743B /* ApprovalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1DB81918382B007C743B /* ApprovalTableViewController.m */; };
 		6E8B1DBC19183844007C743B /* RequestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1DBB19183844007C743B /* RequestTableViewCell.m */; };
 		6E8B1DBF19183854007C743B /* ApprovalsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1DBE19183854007C743B /* ApprovalsTableViewCell.m */; };
+		6E9BD02C19193D5E0052A38C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9BD02419193D5E0052A38C /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6E9BD02D19193D5E0052A38C /* NSObject+CancelableBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9BD02719193D5E0052A38C /* NSObject+CancelableBlock.m */; };
+		6E9BD02E19193D5E0052A38C /* VJGeoAutocomplete.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9BD02919193D5E0052A38C /* VJGeoAutocomplete.m */; };
+		6E9BD02F19193D5E0052A38C /* VJGeoPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9BD02B19193D5E0052A38C /* VJGeoPrediction.m */; };
+		6E9BD03419193DE40052A38C /* AddLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9BD03119193DE40052A38C /* AddLocationViewController.m */; };
+		6E9BD03519193DE40052A38C /* JHCustomSeague.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9BD03319193DE40052A38C /* JHCustomSeague.m */; };
 		6EB6234518F898FA004B9533 /* CompleteProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB6234418F898FA004B9533 /* CompleteProfileViewController.m */; };
 		6EB6234718F8B034004B9533 /* register-form.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB6234618F8B034004B9533 /* register-form.png */; };
 		6EB6234918F8B2D1004B9533 /* save-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB6234818F8B2D1004B9533 /* save-btn.png */; };
@@ -242,6 +248,18 @@
 		6E8B1DBB19183844007C743B /* RequestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestTableViewCell.m; sourceTree = "<group>"; };
 		6E8B1DBD19183854007C743B /* ApprovalsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApprovalsTableViewCell.h; sourceTree = "<group>"; };
 		6E8B1DBE19183854007C743B /* ApprovalsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApprovalsTableViewCell.m; sourceTree = "<group>"; };
+		6E9BD02319193D5E0052A38C /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		6E9BD02419193D5E0052A38C /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		6E9BD02619193D5E0052A38C /* NSObject+CancelableBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CancelableBlock.h"; sourceTree = "<group>"; };
+		6E9BD02719193D5E0052A38C /* NSObject+CancelableBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CancelableBlock.m"; sourceTree = "<group>"; };
+		6E9BD02819193D5E0052A38C /* VJGeoAutocomplete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VJGeoAutocomplete.h; sourceTree = "<group>"; };
+		6E9BD02919193D5E0052A38C /* VJGeoAutocomplete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VJGeoAutocomplete.m; sourceTree = "<group>"; };
+		6E9BD02A19193D5E0052A38C /* VJGeoPrediction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VJGeoPrediction.h; sourceTree = "<group>"; };
+		6E9BD02B19193D5E0052A38C /* VJGeoPrediction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VJGeoPrediction.m; sourceTree = "<group>"; };
+		6E9BD03019193DE40052A38C /* AddLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddLocationViewController.h; path = "../../../Dropbox/CarPool/CarPoolPrototype5-master-05052014/CarPoolPrototype5-master/CarPoolPrototype5/AddLocationViewController.h"; sourceTree = "<group>"; };
+		6E9BD03119193DE40052A38C /* AddLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddLocationViewController.m; path = "../../../Dropbox/CarPool/CarPoolPrototype5-master-05052014/CarPoolPrototype5-master/CarPoolPrototype5/AddLocationViewController.m"; sourceTree = "<group>"; };
+		6E9BD03219193DE40052A38C /* JHCustomSeague.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JHCustomSeague.h; path = "../../../Dropbox/CarPool/CarPoolPrototype5-master-05052014/CarPoolPrototype5-master/CarPoolPrototype5/JHCustomSeague.h"; sourceTree = "<group>"; };
+		6E9BD03319193DE40052A38C /* JHCustomSeague.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JHCustomSeague.m; path = "../../../Dropbox/CarPool/CarPoolPrototype5-master-05052014/CarPoolPrototype5-master/CarPoolPrototype5/JHCustomSeague.m"; sourceTree = "<group>"; };
 		6EB6234318F898FA004B9533 /* CompleteProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteProfileViewController.h; sourceTree = "<group>"; };
 		6EB6234418F898FA004B9533 /* CompleteProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteProfileViewController.m; sourceTree = "<group>"; };
 		6EB6234618F8B034004B9533 /* register-form.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "register-form.png"; sourceTree = "<group>"; };
@@ -343,6 +361,10 @@
 		6E14109418F1D6750080448F /* Scheduling */ = {
 			isa = PBXGroup;
 			children = (
+				6E9BD03019193DE40052A38C /* AddLocationViewController.h */,
+				6E9BD03119193DE40052A38C /* AddLocationViewController.m */,
+				6E9BD03219193DE40052A38C /* JHCustomSeague.h */,
+				6E9BD03319193DE40052A38C /* JHCustomSeague.m */,
 				6E14108D18F077750080448F /* ScheduleTripViewController.h */,
 				6E14108E18F077750080448F /* ScheduleTripViewController.m */,
 				6E14109718F229010080448F /* ScheduledTripDetailsViewController.h */,
@@ -458,6 +480,7 @@
 		6E337DDB18DA5D2E00654210 /* CarPoolPrototype5 */ = {
 			isa = PBXGroup;
 			children = (
+				6E9BD02119193D5E0052A38C /* Library */,
 				6EE6972B19154BDD0070FFB5 /* Storyboard */,
 				6EE8032D19190E4800E52655 /* View User */,
 				6E8B1DB2191837F0007C743B /* Join Trip */,
@@ -569,6 +592,38 @@
 				6E8B1DBE19183854007C743B /* ApprovalsTableViewCell.m */,
 			);
 			name = "Join Trip";
+			sourceTree = "<group>";
+		};
+		6E9BD02119193D5E0052A38C /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				6E9BD02219193D5E0052A38C /* JSONKit */,
+				6E9BD02519193D5E0052A38C /* NSObject+CancelableBlock */,
+				6E9BD02819193D5E0052A38C /* VJGeoAutocomplete.h */,
+				6E9BD02919193D5E0052A38C /* VJGeoAutocomplete.m */,
+				6E9BD02A19193D5E0052A38C /* VJGeoPrediction.h */,
+				6E9BD02B19193D5E0052A38C /* VJGeoPrediction.m */,
+			);
+			name = Library;
+			path = "../../../Dropbox/CarPool/CarPoolPrototype5-master-05052014/CarPoolPrototype5-master/Library";
+			sourceTree = "<group>";
+		};
+		6E9BD02219193D5E0052A38C /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				6E9BD02319193D5E0052A38C /* JSONKit.h */,
+				6E9BD02419193D5E0052A38C /* JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		6E9BD02519193D5E0052A38C /* NSObject+CancelableBlock */ = {
+			isa = PBXGroup;
+			children = (
+				6E9BD02619193D5E0052A38C /* NSObject+CancelableBlock.h */,
+				6E9BD02719193D5E0052A38C /* NSObject+CancelableBlock.m */,
+			);
+			path = "NSObject+CancelableBlock";
 			sourceTree = "<group>";
 		};
 		6EBF9C961915AFFF001BC2E1 /* Stars */ = {
@@ -773,22 +828,28 @@
 				6E0ED3E218F4A7B6002EC961 /* MapPoint.m in Sources */,
 				6E8B1DB519183814007C743B /* RequestTableViewController.m in Sources */,
 				6E0ED3DB18F49158002EC961 /* MyTripTableViewCell.m in Sources */,
+				6E9BD03519193DE40052A38C /* JHCustomSeague.m in Sources */,
 				6EB6234518F898FA004B9533 /* CompleteProfileViewController.m in Sources */,
 				6E8B1DAE1918237E007C743B /* DashboardTripsTableView.m in Sources */,
 				6E8B1DAA191818D2007C743B /* MyTripsTableView.m in Sources */,
 				6E2C931A18DF850D00C2CFC7 /* MainMenuViewController.m in Sources */,
 				6E8B1DB1191823AE007C743B /* DashboardTripsTableViewCell.m in Sources */,
+				6E9BD02E19193D5E0052A38C /* VJGeoAutocomplete.m in Sources */,
 				6E0ED3D818F49108002EC961 /* MyTripsTableViewController.m in Sources */,
 				6EF74D9B18DA86B4002479C2 /* DashBoardViewController.m in Sources */,
 				6EBF9C8C1915AD91001BC2E1 /* RateView.m in Sources */,
+				6E9BD02D19193D5E0052A38C /* NSObject+CancelableBlock.m in Sources */,
 				6EC24D8718E61FDC00964F31 /* MBProgressHUD.m in Sources */,
+				6E9BD02F19193D5E0052A38C /* VJGeoPrediction.m in Sources */,
 				6E02070218E3BC6C00C5322D /* BrowseTripsTableViewController.m in Sources */,
+				6E9BD03419193DE40052A38C /* AddLocationViewController.m in Sources */,
 				6E8B1DB91918382B007C743B /* ApprovalTableViewController.m in Sources */,
 				6E2C931318DF76E900C2CFC7 /* AMSlideMenuRightTableViewController.m in Sources */,
 				6E14109918F229010080448F /* ScheduledTripDetailsViewController.m in Sources */,
 				6E2C931018DF76E900C2CFC7 /* AMSlideMenuLeftTableViewController.m in Sources */,
 				6EC24D8418E5D4E000964F31 /* TripDetailViewController.m in Sources */,
 				6E14108F18F077750080448F /* ScheduleTripViewController.m in Sources */,
+				6E9BD02C19193D5E0052A38C /* JSONKit.m in Sources */,
 				6E0ED42C18F71A75002EC961 /* PhotoUploaderViewController.m in Sources */,
 				6E2C931218DF76E900C2CFC7 /* AMSlideMenuRightMenuSegue.m in Sources */,
 				6E2C930E18DF76E900C2CFC7 /* AMSlideMenuContentSegue.m in Sources */,
