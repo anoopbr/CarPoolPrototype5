@@ -8,6 +8,7 @@
 
 #import "TripDetailViewController.h"
 #import "ViewProfileViewController.h"
+#import "AddLocationViewController.h"
 
 
 NSString *tripid;
@@ -135,6 +136,21 @@ NSString *tripid;
         
         TripDetailViewController *detailViewController = [segue destinationViewController];
         detailViewController.trip = self.trip;
+        
+    }
+    
+    if ([[segue identifier] isEqualToString:@"addStartPoint"]) {
+        
+        AddLocationViewController *startLocationController = [segue destinationViewController];
+        
+        startLocationController.incomingsegueidentifier = @"StartPoint";
+        
+    }
+    if ([[segue identifier] isEqualToString:@"addDestinationPoint"]) {
+        
+        AddLocationViewController *startLocationController = [segue destinationViewController];
+        
+        startLocationController.incomingsegueidentifier = @"DestinationPoint";
         
     }
 }

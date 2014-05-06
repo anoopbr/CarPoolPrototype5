@@ -25,4 +25,7 @@
 
 @property (nonatomic, strong) NSArray *ObjectArray;
 
+@property (weak, nonatomic) NSString *tripFromPlaceText;
+@property (weak, nonatomic) NSString *tripToPlaceText;
+
 @end

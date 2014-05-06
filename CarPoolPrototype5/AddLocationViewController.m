@@ -11,6 +11,7 @@
 #import "VJGeoAutocomplete.h"
 #import "ScheduleTripViewController.h"
 #import <UIKit/UIKit.h>
+#import "TripDetailViewController.h"
 
 
 #import "AddLocationViewController.h"
@@ -137,11 +138,17 @@
             ScheduleTripViewController *tripViewController = [segue destinationViewController];
             tripViewController.tripToPlaceText = sender;
             
+            TripDetailViewController *tripDetailsViewController = [segue destinationViewController];
+            tripDetailsViewController.tripToPlaceText = sender;
+            
         }
         if (([self.incomingsegueidentifier  isEqual: @"StartPoint"])) {
             NSLog(@"Pressed StartPoint Address: %@", sender);
             ScheduleTripViewController *tripViewController = [segue destinationViewController];
             tripViewController.tripFromPlaceText = sender;
+            
+            TripDetailViewController *tripDetailsViewController = [segue destinationViewController];
+            tripDetailsViewController.tripFromPlaceText = sender;
             
         }
     }

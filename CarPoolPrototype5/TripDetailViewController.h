@@ -25,4 +25,8 @@
 
 @property (weak, nonatomic) PFObject *trip;
 
+@property (weak, nonatomic) NSString *tripFromPlaceText;
+@property (weak, nonatomic) NSString *tripToPlaceText;
+
+
 @end
