@@ -9,11 +9,15 @@
 #import "ScheduleTripViewController.h"
 #import <Parse/Parse.h>
 #import "ScheduledTripDetailsViewController.h"
+#import "AddLocationViewController.h"
 
 PFObject *parseObject;
 NSString *setFrom, *setTo, *setDescription, *setSeats ;
 NSDate *setDate;
 NSString *dateText;
+
+NSString * fromPlaceMap = @"";
+NSString * toPlaceMap = @"";
 
 @interface ScheduleTripViewController ()
 
@@ -37,9 +41,19 @@ NSString *dateText;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if(![self.tripFromPlaceText isEqualToString:@""]){
+        if(![self.tripFromPlaceText length] == 0){
+            fromPlaceMap = self.tripFromPlaceText;
+        }
+    }
+    if(![self.tripToPlaceText isEqualToString:@""]){
+        if(![self.tripToPlaceText length] == 0){
+            toPlaceMap = self.tripToPlaceText;
+        }
+    }
     
-    fromPlace.text = self.tripFromPlaceText;
-    toPlace.text = self.tripToPlaceText;
+    fromPlace.text = fromPlaceMap;
+    toPlace.text = toPlaceMap;
     description.text = @"";
     dateField.text = @"";
     seatLabel.text = @"0";
@@ -231,6 +245,22 @@ NSString *dateText;
         
         
     }
+    
+    if ([[segue identifier] isEqualToString:@"addStartPoint"]) {
+        
+        AddLocationViewController *startLocationController = [segue destinationViewController];
+        
+        startLocationController.incomingsegueidentifier = @"StartPoint";
+        
+    }
+    if ([[segue identifier] isEqualToString:@"addDestinationPoint"]) {
+        
+        AddLocationViewController *startLocationController = [segue destinationViewController];
+        
+        startLocationController.incomingsegueidentifier = @"DestinationPoint";
+        
+    }
+
 }
 
 -(void)updateDateField:(id)sender
