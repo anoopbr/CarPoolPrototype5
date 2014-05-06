@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *fromText;
 @property (weak, nonatomic) IBOutlet UITextField *toText;
 @property (weak, nonatomic) IBOutlet UITextView *commentText;
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 
 @property (weak, nonatomic) PFObject *trip;
 

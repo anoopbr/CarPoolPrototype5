@@ -29,7 +29,49 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    NSLog(@"%@",self.trip);
+    
+    PFObject *userid = self.trip[@"User"];
+    NSLog(@"userid , %@", userid);
+
+    PFQuery *retrieveStories = [PFQuery queryWithClassName:@"Trips"];
+    [retrieveStories whereKey:@"objectId" equalTo:self.trip.objectId];
+    [retrieveStories includeKey:@"User"];
+    [retrieveStories getObjectInBackgroundWithId:self.trip.objectId block:^(PFObject *gameScore, NSError *error) {
+        // Do something with the returned PFObject in the gameScore variable.
+        NSLog(@"trip, %@", gameScore);
+        NSLog(@"trip, %@", gameScore[@"User"][@"first"]);
+        NSString *first = gameScore[@"User"][@"first"];
+        NSString *last = gameScore[@"User"][@"last"];
+        NSString *aboutme = gameScore[@"User"][@"aboutme"];
+        NSString *phone = gameScore[@"User"][@"phone"];
+        NSString *gender = gameScore[@"User"][@"gender"];
+        NSString *place = gameScore[@"User"][@"place"];
+        NSMutableString *name = [NSString stringWithFormat: @"%@ %@", first, last];
+        NSDate *dob = gameScore[@"User"][@"createdAt"];
+        PFFile *userImageFile = gameScore[@"User"][@"image"];
+        
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"MM/dd/yyyy"];
+        
+        NSString *date = [dateFormatter stringFromDate:dob];
+        
+        self.name.text = name;
+        self.about.text = aboutme;
+        self.place.text = place;
+        [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+            if (!error) {
+                _profilePic.image = [UIImage imageWithData:imageData];
+            }
+        }];
+
+        PFQuery *retuser = [PFQuery queryWithClassName:@"_User"];
+        [retuser whereKey:@"objectId" equalTo:gameScore.objectId];
+            [retuser getObjectInBackgroundWithId:gameScore[@"User"] block:^(PFObject *user, NSError *error) {
+                NSLog(@"user, %@", user);
+            }];
+    }];
+
+    
 //    NSString *userid = [self.trip valueForKey:@"User"];
 //    NSLog(@"%@",userid);
 //    
@@ -45,31 +87,9 @@
     
 //    [query getObjectWithId:user];
     
-    NSLog(@"%@",user);
+//    NSLog(@"%@",user);
     
-    NSString *first = user[@"first"];
-    NSString *last = user[@"last"];
-    NSString *aboutme = user[@"aboutme"];
-    NSString *phone = user[@"phone"];
-    NSString *gender = user[@"gender"];
-    NSString *place = user[@"place"];
-    NSMutableString *name = [NSString stringWithFormat: @"%@ %@", first, last];
-    NSDate *dob = user[@"createdAt"];
-    PFFile *userImageFile = user[@"image"];
-    
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MM/dd/yyyy"];
-    
-    NSString *date = [dateFormatter stringFromDate:dob];
-    
-    self.name.text = name;
-    self.about.text = aboutme;
-    self.place.text = place;
-    [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
-        if (!error) {
-            _profilePic.image = [UIImage imageWithData:imageData];
-        }
-    }];
+
 }
 
 - (void)didReceiveMemoryWarning
