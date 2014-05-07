@@ -2,11 +2,13 @@
 //  ApprovalTableViewController.m
 //  CarPoolPrototype5
 //
-//  Created by Anoop Balakrishnan Rema on 5/5/14.
-//  Copyright (c) 2014 Anoop Balakrishnan Rema. All rights reserved.
+//  Created by Chirag Gajjar on 5/6/14.
+//  Copyright (c) 2014 Chirag Gajjar. All rights reserved.
 //
 
 #import "ApprovalTableViewController.h"
+#import "ApprovalsTableViewCell.h"
+#import "ApprovalDetailViewController.h"
 
 @interface ApprovalTableViewController ()
 
@@ -18,7 +20,52 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        // The className to query on
+        self.parseClassName = @"TripDetails";
+        
+        // The key of the PFObject to display in the label of the default cell style
+        self.textKey = @"from";
+        
+        // The title for this table in the Navigation Controller.
+        //self.title = @"To";
+        
+        // Whether the built-in pull-to-refresh is enabled
+        self.pullToRefreshEnabled = YES;
+        
+        // Whether the built-in pagination is enabled
+        self.paginationEnabled = YES;
+        
+        // The number of objects to show per page
+        self.objectsPerPage = 5;
+        
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithClassName:@"TripDetails"];
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        // The className to query on
+        self.parseClassName = @"TripDetails";
+        
+        // The key of the PFObject to display in the label of the default cell style
+        self.fromObjectArray = @"from";
+        self.toObjectArray = @"to";
+        self.dateObjectArray = @"date";
+        self.descriptionObjectArray = @"comment";
+        self.ObjectArray = @"tripid";
+        
+        
+        // Whether the built-in pull-to-refresh is enabled
+        self.pullToRefreshEnabled = YES;
+        
+        // Whether the built-in pagination is enabled
+        self.paginationEnabled = YES;
+        
+        // The number of objects to show per page
+        self.objectsPerPage = 5;
     }
     return self;
 }
@@ -32,7 +79,42 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    /*_fromObjectArray =@[@"xxxx",
+     @"xxxx",
+     @"xxxx",
+     @"xxxx",
+     @"xxxx"];
+     _toObjectArray =@[@"yyyyy",
+     @"yyyyy",
+     @"yyyyy",
+     @"yyyyy",
+     @"yyyyy"];
+     _dateObjectArray =@[@"zzzz",
+     @"zzzz",
+     @"zzzz",
+     @"zzzz",
+     @"zzzz"];
+     _descriptionObjectArray =@[@"xxqqqqqxx",
+     @"xxqqqqqxx",
+     @"xxqqqqqxx",
+     @"xxqqqqqxx",
+     @"xxqqqqqxx"];*/
+    
+    // [self performSelector:@selector(retrieveFromParse)];
 }
+
+/* - (void) retrieveFromParse{
+ 
+ PFQuery *retrieveTrips = [PFQuery queryWithClassName:@"Trips"];
+ 
+ [retrieveTrips findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+ if (!error) {
+ tripArray = [[NSArray alloc]initWithArray:objects];
+ NSLog(@"%@",tripArray);
+ }
+ }];
+ } */
 
 - (void)didReceiveMemoryWarning
 {
@@ -44,76 +126,112 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+/*- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+ {
+ // Return the number of rows in the section.
+ return _fromObjectArray.count;
+ }*/
+
+// Override to customize what kind of query to perform on the class. The default is to query for
+// all objects ordered by createdAt descending.
+- (PFQuery *)queryForTable {
+    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+    
+    // Using where clause
+    // [query whereKey:@"From" equalTo:@"Brooklyn"];
+    
+    // If no objects are loaded in memory, we look to the cache first to fill the table
+    // and then subsequently do a query against the network.
+    if ([self.objects count] == 0) {
+        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    }
+    
+    PFUser *currentuser = [PFUser currentUser];
+    
+    [query orderByAscending:@"date"];
+    [query whereKey:@"user" equalTo:currentuser];
+    [query whereKey:@"date" greaterThanOrEqualTo:[NSDate date]];
+    [query whereKey:@"status" equalTo:@"Owner"];
+    
+    return query;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+
+/* - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
+ static NSString *CellIdentifier = @"BrowseTripsTableViewCell";
+ BrowseTripsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+ 
+ if (cell == nil) {
+ cell = [[BrowseTripsTableViewCell alloc] init];
+ }
+ 
+ NSLog(@"description = %@",[cell description]);
+ 
+ cell.fromLabel.text = [object objectForKey:@"From"];
+ cell.toLabel.text = [object objectForKey:@"To"];
+ cell.dateLabel.text = [object objectForKey:@"Date"];
+ cell.descriptionLabel.text = [object objectForKey:@"Description"];
+ 
+ // Configure the cell...
+ 
+ return cell;
+ }
+ */
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
+    static NSString *CellIdentifier = @"ApprovalsTableViewCell";
     
-    // Configure the cell...
+    ApprovalsTableViewCell *cell = (ApprovalsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[ApprovalsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
+    // Configure the cell
+    
+    NSLog([object objectForKey:self.fromObjectArray]);
+    NSLog(self.toObjectArray);
+    NSLog(self.descriptionObjectArray);
+    
+    NSMutableString *tripPlace = [NSString stringWithFormat: @"%@ to %@", [object objectForKey:self.fromObjectArray], [object objectForKey:self.toObjectArray]];
+    
+    cell.fromLabel.text = tripPlace;
+    cell.dateLabel.text = [NSString stringWithFormat:@"%@",[object objectForKey:self.dateObjectArray]];
+    cell.descriptionLabel.text = [object objectForKey:self.descriptionObjectArray];
+    cell.objectLabel = [object valueForKey:self.ObjectArray];
+    NSLog(@"%@",[NSString stringWithFormat:@"%@",[object objectForKey:@"Id"]]);
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"ApprovalDetail"]) {
+        
+        NSLog(@"Segue Pressed");
+
+        
+        ApprovalDetailViewController *tripDetail = [segue destinationViewController];
+        
+        NSIndexPath *myIndexPath = [self.tableView indexPathForSelectedRow];
+        PFObject *object = [self.objects objectAtIndex:myIndexPath.row];
+        
+        ApprovalDetailViewController *detailViewController = [segue destinationViewController];
+        detailViewController.trip = object;
+        
+    }
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
+

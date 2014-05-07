@@ -8,6 +8,7 @@
 
 #import "MyTripViewController.h"
 #import "FeedbackViewController.h"
+//#import "MyTripMapViewController.h"
 
 @interface MyTripViewController ()
 
@@ -55,6 +56,20 @@
         detailViewController.trip = self.trip;
         
     }
+   /* else if ([[segue identifier] isEqualToString:@"viewRoute"]) {
+        
+        NSLog(@"Segue Pressed view user");
+        
+        MyTripViewController *mapViewController = [segue destinationViewController];
+        
+    //    NSLog(@"tripid");
+       // NSLog(_objectLabel);
+        mapViewController.fromlocation = [self.trip objectForKey:@"From"];
+        mapViewController.tolocation = [self.trip objectForKey:@"To"];
+        mapViewController.tripid = [self.trip valueForKey:@"objectId"];
+        //  mapViewController.trip = self.trip;
+        
+    }*/
 }
 
 

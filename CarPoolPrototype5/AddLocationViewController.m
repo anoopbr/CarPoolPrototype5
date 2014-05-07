@@ -2,8 +2,8 @@
 //  AddLocationViewController.m
 //  CarPoolPrototype5
 //
-//  Created by Student on 5/5/14.
-//  Copyright (c) 2014 Anoop Balakrishnan Rema. All rights reserved.
+//  Created by Tanay Lakhani  on 5/5/14.
+//  Copyright (c) 2014 Tanay Lakhani . All rights reserved.
 //
 
 

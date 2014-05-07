@@ -18,4 +18,6 @@
 
 @property (weak, nonatomic) PFObject *trip;
 
+
+
 @end

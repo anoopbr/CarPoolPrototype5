@@ -152,10 +152,15 @@
     
     PFUser *currentuser = [PFUser currentUser];
     
+    PFQuery *query1 = [PFQuery queryWithClassName:@"TripDetails"];
+    [query1 whereKey:@"user" equalTo:currentuser];
+    [query1 selectKeys:@[@"tripid"]];
+    
+    
     [query orderByAscending:@"Date"];
     [query whereKey:@"User" notEqualTo:currentuser];
-    [query whereKey:@"Date" greaterThanOrEqualTo:[NSDate date]];
-//    [query whereKey:@"Seats" notEqualTo:@"0"];
+    [query whereKey:@"objectId" doesNotMatchKey:@"tripid" inQuery:query1];
+    //[query whereKey:@"Seats" notEqualTo:@"0"];
     
     return query;
 }
@@ -192,6 +197,11 @@
     }
     
     // Configure the cell
+    
+    NSLog(self.fromObjectArray);
+    NSLog(self.toObjectArray);
+    NSLog(self.descriptionObjectArray);
+    
     
     NSMutableString *tripPlace = [NSString stringWithFormat: @"%@ to %@", [object objectForKey:self.fromObjectArray], [object objectForKey:self.toObjectArray]];
     

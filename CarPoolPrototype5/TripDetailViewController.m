@@ -2,13 +2,14 @@
 //  TripDetailViewController.m
 //  CarPoolPrototype5
 //
-//  Created by Anoop Balakrishnan Rema on 3/28/14.
-//  Copyright (c) 2014 Anoop Balakrishnan Rema. All rights reserved.
+//  Created by Anoop Balakrishnan Rema & Chirag Gajjar on 3/26/14.
+//  Copyright (c) 2014 Anoop Balakrishnan Rema & Chirag Gajjar. All rights reserved.
 //
 
 #import "TripDetailViewController.h"
 #import "ViewProfileViewController.h"
 #import "AddLocationViewController.h"
+#import "MapViewController.h"
 
 
 NSString *tripid;
@@ -37,6 +38,9 @@ NSString *tripid;
     _toLabel.text = [self.trip objectForKey:@"To"];
     _dateLabel.text = [NSString stringWithFormat:@"%@",[self.trip objectForKey:@"Date"]];
     _descriptionLabel.text = [self.trip objectForKey:@"Description"];
+    
+    _fromText.text = [self.trip objectForKey:@"From"];
+    _toText.text = [self.trip objectForKey:@"To"];
     
     tripid = [self.trip objectForKey:@"tripid"];
     NSLog(@"tripid");
@@ -153,6 +157,21 @@ NSString *tripid;
         startLocationController.incomingsegueidentifier = @"DestinationPoint";
         
     }
+    else if ([[segue identifier] isEqualToString:@"viewRoute"]) {
+        
+        NSLog(@"Segue Pressed view user");
+        
+        MapViewController *mapViewController = [segue destinationViewController];
+        
+        NSLog(@"tripid");
+        NSLog(_objectLabel);
+        mapViewController.fromlocation = [self.trip objectForKey:@"From"];
+        mapViewController.tolocation = [self.trip objectForKey:@"To"];
+        mapViewController.tripid = [self.trip valueForKey:@"objectId"];
+        //  mapViewController.trip = self.trip;
+        
+    }
+
 }
 
 - (void) dismissKeyboard{

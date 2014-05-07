@@ -2,8 +2,8 @@
 //  TripDetailViewController.h
 //  CarPoolPrototype5
 //
-//  Created by Anoop Balakrishnan Rema on 3/28/14.
-//  Copyright (c) 2014 Anoop Balakrishnan Rema. All rights reserved.
+//  Created by Anoop Balakrishnan Rema & Chirag Gajjar on 3/26/14.
+//  Copyright (c) 2014 Anoop Balakrishnan Rema & Chirag Gajjar. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
